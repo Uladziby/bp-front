@@ -1,7 +1,14 @@
 /** @format */
-
-import { blue, blueDark, gray, grayDark, green, greenDark, red, redDark } from "@radix-ui/colors";
-import { indigo, bronze, slate, indigoDark, bronzeDark, slateDark } from "@radix-ui/colors";
+import {
+	indigo,
+	gray,
+	slate,
+	indigoDark,
+	grayDark,
+	slateDark,
+	mauve,
+	mauveDark,
+} from "@radix-ui/colors";
 
 export const base = {
 	breakpoints: ["768px"],
@@ -13,30 +20,26 @@ export const base = {
 	fontSizes: ["12px", "14px", "16px", "20px", "24px"],
 };
 
-/* export const Light = {
-	primary: "#4851f4",
-	background: "#ffffff",
-	nav: "#f8f8f8",
-	border: "#deebf1",
-	text: "#202224",
-};
-
-export const Dark = {
-	primary: "#4851f4",
-	background: "#1f2023",
-	nav: "#27282b",
-	border: "#303236",
-	text: "#f8f8f8",
-}; */
+export enum ThemeEnum {
+	light = "Light",
+	dark = "Dark",
+}
 
 export const Light = {
 	...indigo,
-	...bronze,
+	...gray,
 	...slate,
+	...mauve,
 };
 
 export const Dark = {
 	...indigoDark,
-	...bronzeDark,
+	...grayDark,
 	...slateDark,
+	...mauveDark,
+};
+
+export const themesMap = {
+	Light,
+	Dark,
 };

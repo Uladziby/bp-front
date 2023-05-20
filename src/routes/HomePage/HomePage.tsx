@@ -1,11 +1,13 @@
 /** @format */
-
-import { HeaderComponent } from "components/HeaderComponent/HeaderComponent";
+import { Counter } from "routes/counter";
+import { StyledContainer } from "./HomePage.style";
+import background from "../../assets/main_bg.jpg";
 
 export const HomePage = () => {
 	return (
-		<div>
-			<HeaderComponent></HeaderComponent>
-		</div>
+		<>
+			<StyledContainer style={{ backgroundImage: `url(${background})` }}></StyledContainer>
+			<Counter />
+		</>
 	);
 };

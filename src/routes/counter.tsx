@@ -18,13 +18,15 @@ export const Counter = () => {
 	return (
 		<>
 			<div>{data?.availablePets}</div>
-			{pets.map(({ name, weight, id }) => (
-				<>
-					<li>id : {id}</li>
-					<li>name : {name}</li>
-					<li>weight : {weight}</li>
-				</>
-			))}
+			{pets.map(({ name, weight, id }) => {
+				return (
+					<div key={id}>
+						<li>id : {id}</li>
+						<li>name : {name}</li>
+						<li>weight : {weight}</li>
+					</div>
+				);
+			})}
 		</>
 	);
 };

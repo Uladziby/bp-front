@@ -34,6 +34,7 @@ export const StyledRoot = styled(Root)<SwitchRootProps>`
 	box-shadow: 0 2px 10px var(--blackA7);
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	border-width: 1px;
+	cursor: pointer;
 
 	&:focus {
 		box-shadow: 0 0 0 2px black;

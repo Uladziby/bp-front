@@ -1,24 +1,14 @@
 /** @format */
 
-import { HomePage } from "routes/HomePage/HomePage";
 import "./App.css";
 import { client } from "./init/client";
 import { ApolloProvider } from "@apollo/react-hooks";
-import { Counter } from "routes/counter";
 import { ThemeContext, ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { Dark, Light, base } from "utils/themes";
+import { ThemeEnum, themesMap } from "utils/themes";
 import GlobalStyle from "globalStyles";
-
-export enum ThemeEnum {
-	light = "Light",
-	dark = "Dark",
-}
-
-const themesMap = {
-	Light,
-	Dark,
-};
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "routes/Router";
 
 const App = () => {
 	const [currentTheme, setCurrentTheme] = useState<ThemeEnum>(ThemeEnum.light);
@@ -29,9 +19,9 @@ const App = () => {
 			<ThemeProvider theme={theme}>
 				<ApolloProvider client={client}>
 					<GlobalStyle />
-					<HomePage />
-					{/* 					<Counter />
-					 */}{" "}
+					<BrowserRouter>
+						<Router />
+					</BrowserRouter>
 				</ApolloProvider>
 			</ThemeProvider>
 		</ThemeContext.Provider>
