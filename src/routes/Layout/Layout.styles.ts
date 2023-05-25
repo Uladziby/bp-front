@@ -8,5 +8,4 @@ export const StyledContainer = styled.div`
 	margin: 0 auto;
 	width: inherit;
 	font-size: 50px;
-	background-color: ${({ theme }) => theme.colors.gray2};
 `;

@@ -32,9 +32,11 @@ const VARIANT = {
 	`,
 	secondary: css`
 		background: ${secondaryDefault};
+
 		:hover {
 			background: ${secondaryHover};
 		}
+
 		:disabled {
 			background: ${secondaryDisabled};
 			color: ${disabled};
@@ -77,10 +79,11 @@ export const StyledButton = styled.button<{
 	justify-content: center;
 	border-radius: 1rem;
 	background-color: transparent;
-	font-weight: 700;
-	font-size: 2rem;
+	font-weight: 500;
+	font-size: 1.5rem;
 	line-height: 1;
 	cursor: pointer;
+
 	box-shadow: 0 2px 10px ${({ theme }) => theme.colors.slate7};
 
 	${({ variant }) => variant && VARIANT[variant]};

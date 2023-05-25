@@ -55,8 +55,8 @@ export const StyledListElement = styled(NavLink)<{ isScrolling: boolean }>`
 	align-items: center;
 	text-underline-offset: 1rem;
 	text-decoration: none;
-	font-size: 2.5rem;
-	font-weight: 600;
+	font-size: 1.5rem;
+	font-weight: 400;
 	transition: color 0.25s;
 
 	color: ${({ theme }) => theme.colors.mauve12};

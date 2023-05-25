@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ATitle snapshot 1`] = `
+<h2
+  class="sc-bcXHqe eFrToj"
+  color="white"
+  size="30"
+>
+  <p>
+    child
+  </p>
+</h2>
+`;
