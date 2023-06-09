@@ -32,13 +32,17 @@ export const StyledNavBar = styled.nav`
 	transition: height 0.25s;
 `;
 
-export const StyledLogo = styled.a<{ isScrolling: boolean }>`
+export const StyledLogo = styled.a<{ isscrolling: boolean }>`
 	display: flex;
 	font-size: 5rem;
 	font-weight: 900;
 	cursor: pointer;
 
-	color: ${({ theme }) => theme.colors.mauve12};
+	color: white;
+
+	& svg {
+		height: ${({ isscrolling }) => (isscrolling ? "44px" : "80px")};
+	}
 `;
 
 export const StyledList = styled.ul`
@@ -49,7 +53,7 @@ export const StyledList = styled.ul`
 	margin-right: auto;
 `;
 
-export const StyledListElement = styled(NavLink)<{ isScrolling: boolean }>`
+export const StyledListElement = styled(NavLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -71,3 +75,32 @@ export const StyledListElement = styled(NavLink)<{ isScrolling: boolean }>`
 		text-decoration-thickness: 1px;
 	}
 `;
+
+/* .nav {
+	font-weight: 500;
+	line-height: 125%;
+	&__item {
+	  position: relative;
+	  &:after {
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		content: "";
+		display: block;
+		width: 0%;
+		height: 2px;
+		background-color: #A545B1;
+		-webkit-transition: width .3s ease-in-out;
+		-moz--transition: width .3s ease-in-out;
+		transition: width .3s ease-in-out;
+	  }
+	  &:hover {
+		color: #A545B1;
+	  }
+	  &:hover:after,
+	  &:focus:after {
+		  width: 100%;
+	  }
+	  &:not(:last-child) {
+		margin: 0 2rem 0 0;
+	  } */

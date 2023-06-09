@@ -1,5 +1,6 @@
 /** @format */
 
+import { buttonWithMotion } from "utils/motion";
 import { StyledButton } from "./AButton.styles";
 import { IAButtonProps } from "./type";
 
@@ -14,8 +15,10 @@ export const AButton = ({
 	type = "button",
 	className,
 	dataTestId,
+	isWithMotion = false,
 }: IAButtonProps) => (
 	<StyledButton
+		{...buttonWithMotion(isWithMotion)}
 		onClick={onClick}
 		title={iconTitle}
 		data-testid={dataTestId}

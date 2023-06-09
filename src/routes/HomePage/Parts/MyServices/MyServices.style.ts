@@ -1,13 +1,14 @@
 /** @format */
 
 import { ASection } from "components/ASection/ASection";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const StyledASection = styled(ASection)`
 	background-color: ${({ theme }) => theme.colors.gray3};
 `;
 
-export const CardsContainer = styled.div<{ width: number }>`
+export const CardsContainer = styled(motion.div)<{ width: number }>`
 	display: grid;
 	grid-row-gap: var(--spacing-l);
 

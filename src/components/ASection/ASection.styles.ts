@@ -6,7 +6,7 @@ import { styled } from "styled-components";
 export const StyledContainer = styled.section`
 	display: flex;
 	align-items: center;
-	padding: 3rem 5%;
+	padding: 3rem 5% 10rem;
 	flex-direction: column;
 `;
 

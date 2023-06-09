@@ -1,5 +1,6 @@
 /** @format */
 
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 import { BUTTON_COLORS } from "utils/colors";
 import { BORDER_RADIUS_ENUM } from "utils/styles";
@@ -68,7 +69,7 @@ const SIZE = {
 	`,
 };
 
-export const StyledButton = styled.button<{
+export const StyledButton = styled(motion.button)<{
 	variant?: "primary" | "secondary";
 	size?: "extraSmall" | "small" | "medium" | "large";
 	isActive?: boolean;

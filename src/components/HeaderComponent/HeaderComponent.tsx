@@ -13,6 +13,7 @@ import { DefaultTheme, ThemeContext } from "styled-components";
 import { ThemeEnum } from "utils/themes";
 import { useScrollingHeader } from "utils/CustomHooks/useScrollingHeader";
 import { AButton } from "components/AButton/AButton";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 
 export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
@@ -35,15 +36,15 @@ export const HeaderComponent = () => {
 	return (
 		<StyledContainer className={isScrolling ? "active" : ""}>
 			<StyledNavBar>
-				<StyledLogo isScrolling={isScrolling}>KATYA.</StyledLogo>
+				<StyledLogo isscrolling={isScrolling}>
+					<Logo />
+				</StyledLogo>
 				<StyledList>
 					{navList.map(({ href, title }, idx) => {
 						return (
-							<li key={idx}>
-								<StyledListElement isScrolling={isScrolling} to={href}>
-									{title}
-								</StyledListElement>
-							</li>
+							<StyledListElement key={idx} to={href}>
+								{title}
+							</StyledListElement>
 						);
 					})}
 				</StyledList>

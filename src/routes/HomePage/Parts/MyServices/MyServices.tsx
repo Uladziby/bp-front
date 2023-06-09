@@ -1,11 +1,13 @@
 /** @format */
 import classes from "./MyServices.module.css";
-import { CardsContainer, StyledASection } from "./MyServices.style";
+import { CardsContainer } from "./MyServices.style";
 import ServiceCard from "./ServiceCard";
 import bg from "../../../../assets/about_me_photo.jpg";
 import { IServiceCard } from "./type";
 import { MY_SERVICES } from "utils/constatns";
 import { useMemo } from "react";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
+import { textVariant } from "utils/motion";
 
 export const MyServices = () => {
 	const serviceCards: IServiceCard[] = useMemo(
@@ -36,10 +38,11 @@ export const MyServices = () => {
 	);
 
 	return (
-		<StyledASection title={MY_SERVICES}>
-			<CardsContainer className={classes.card_grid} width={300}>
+		<AMotionSection title={MY_SERVICES}>
+			<CardsContainer className={classes.card_grid} width={300} variants={textVariant()}>
 				{serviceCards.map(({ title, subtitle, backgroundImage, context }) => (
 					<ServiceCard
+						key={title}
 						width={300}
 						title={title}
 						subtitle={subtitle}
@@ -48,6 +51,6 @@ export const MyServices = () => {
 					/>
 				))}
 			</CardsContainer>
-		</StyledASection>
+		</AMotionSection>
 	);
 };

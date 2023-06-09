@@ -2,10 +2,12 @@
 
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
-import { ASection } from "components/ASection/ASection";
+import { motion } from "framer-motion";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
 
-export const StyledASection = styled(ASection)`
-	background-color: ${({ theme }) => theme.colors.gray2};
+export const StyledAMotionSection = styled(AMotionSection)`
+	display: flex;
+	flex-direction: row;
 `;
 
 export const AboutMePhoto = styled.img`
@@ -19,7 +21,9 @@ export const StyledATitle = styled(ATitle)`
 	color: ${({ theme }) => theme.colors.mauve12};
 `;
 
-export const StyledBlock = styled.div`
+export const StyledBlock = styled(motion.div)`
+	display: flex;
 	flex: 1;
+	flex-direction: column;
 	max-height: 600px;
 `;

@@ -3,6 +3,7 @@ import { ATitle } from "components/ATitle/ATitle";
 import { StyledBackground, StyledCard, StyledCardContent } from "./MyServices.style";
 import { ServiceCardProps } from "./type";
 import * as HoverCard from "@radix-ui/react-hover-card";
+import { StyledHoverCard } from "./ServiceCard.style";
 
 const ServiceCard = ({
 	backgroundImage,
@@ -31,13 +32,8 @@ const ServiceCard = ({
 				</StyledCard>
 			</HoverCard.Trigger>
 			<HoverCard.Portal>
-				<HoverCard.Content className="HoverCardContent" sideOffset={5}>
+				<StyledHoverCard>
 					<div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-						<img
-							className="Image large"
-							src="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
-							alt="Radix UI"
-						/>
 						<div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
 							<div>
 								<div className="Text bold">Radix</div>
@@ -59,7 +55,7 @@ const ServiceCard = ({
 					</div>
 
 					<HoverCard.Arrow className="HoverCardArrow" />
-				</HoverCard.Content>
+				</StyledHoverCard>
 			</HoverCard.Portal>
 		</HoverCard.Root>
 	);
