@@ -1,6 +1,6 @@
 /** @format */
 
-import { ApolloClient, InMemoryCache, NormalizedCacheObject } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const uri = "https://funded-pet-library.moonhighway.com/";
 

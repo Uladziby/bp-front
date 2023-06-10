@@ -1,7 +1,7 @@
 /** @format */
 
 import { Route, Routes } from "react-router-dom";
-import { MAIN_PAGE, NOT_FOUND_PAGE, ROOT_PAGE } from "utils/path";
+import { NOT_FOUND_PAGE, ROOT_PAGE } from "utils/path";
 import { Layout } from "./Layout/Layout";
 import { Suspense } from "react";
 import { HomePage } from "./HomePage/HomePage";
