@@ -13,10 +13,12 @@ export const StyledContainer = styled.section`
 export const StyledContext = styled.div`
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	width: 103%;
 	gap: 3rem;
 `;
 
 export const StyledATitle = styled(ATitle)`
 	color: ${({ theme }) => theme.colors.mauve12};
+	justify-content: center;
+	display: flex;
 `;

@@ -1,8 +1,8 @@
 /** @format */
 
 import { ReactNode } from "react";
-import { staggerContainer } from "utils/motion";
-import { StyledContainer } from "./AMotionSection.style";
+import { staggerContainer, textVariant } from "utils/motion";
+import { StyledContainer, StyledContent } from "./AMotionSection.style";
 import { StyledATitle } from "components/ASection/ASection.styles";
 
 interface AMotionSectionProps {
@@ -23,7 +23,7 @@ export const AMotionSection = ({ children, className, title }: AMotionSectionPro
 			<StyledATitle size={32} weight={700} lineHeight={36}>
 				{title}
 			</StyledATitle>
-			{children}
+			<StyledContent variants={textVariant()}>{children}</StyledContent>
 		</StyledContainer>
 	);
 };

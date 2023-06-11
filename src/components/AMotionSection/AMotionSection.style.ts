@@ -6,9 +6,15 @@ import styled from "styled-components";
 export const StyledContainer = styled(motion.section)`
 	display: flex;
 	padding: 3rem 5%;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
 	gap: 1rem;
 	background-color: ${({ theme }) => theme.colors.gray2};
+`;
+
+export const StyledContent = styled(motion.div)`
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 `;

@@ -73,6 +73,7 @@ export const StyledButton = styled(motion.button)<{
 	variant?: "primary" | "secondary";
 	size?: "extraSmall" | "small" | "medium" | "large";
 	isActive?: boolean;
+	$ishidden?: boolean;
 }>`
 	all: unset;
 	display: inline-flex;
@@ -91,6 +92,7 @@ export const StyledButton = styled(motion.button)<{
 	${({ size }) => size && SIZE[size]};
 	fill: ${({ isActive }) => (isActive ? basicWhite : defaultFill)};
 	${({ variant }) => variant && VARIANT[variant]};
+	visibility: ${({ $ishidden }) => (!$ishidden ? "visible" : "hidden")};
 
 	&:hover {
 		background-color: ${({ theme }) => theme.colors.slate7};

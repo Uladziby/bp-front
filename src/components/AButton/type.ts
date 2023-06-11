@@ -15,4 +15,5 @@ export interface IAButtonProps {
 	iconTitle?: string;
 	dataTestId?: string;
 	isWithMotion?: boolean;
+	ishidden?: boolean;
 }

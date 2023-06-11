@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import {
+	StyledADropdownMenu,
 	StyledContainer,
 	StyledList,
 	StyledListElement,
@@ -14,11 +15,12 @@ import { ThemeEnum } from "utils/themes";
 import { useScrollingHeader } from "utils/CustomHooks/useScrollingHeader";
 import { AButton } from "components/AButton/AButton";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+import { INavList } from "./type";
 
 export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
 
-	const navList = [
+	const navList: INavList[] = [
 		{ href: "#", title: "О мне" },
 		{ href: "#", title: "Контакты" },
 		{ href: "#", title: "Мои услуги" },
@@ -34,11 +36,12 @@ export const HeaderComponent = () => {
 	};
 
 	return (
-		<StyledContainer className={isScrolling ? "active" : ""}>
-			<StyledNavBar>
-				<StyledLogo isscrolling={isScrolling}>
+		<StyledContainer $isScrolling={isScrolling}>
+			<StyledNavBar $isScrolling={isScrolling}>
+				<StyledLogo $isScrolling={isScrolling}>
 					<Logo />
 				</StyledLogo>
+				<StyledADropdownMenu>{navList}</StyledADropdownMenu>
 				<StyledList>
 					{navList.map(({ href, title }, idx) => {
 						return (

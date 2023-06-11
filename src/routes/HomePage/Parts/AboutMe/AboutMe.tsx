@@ -2,7 +2,7 @@
 
 import { AboutMePhoto, StyledAMotionSection, StyledATitle, StyledBlock } from "./AboutMe.styles";
 import { ABOUTME_TITLE, ABOUTME_TEXT } from "utils/constatns";
-import background from "../../../../assets/about_me_photo.jpg";
+import background from "../../../../assets/katrix_1.jpg";
 import { motion } from "framer-motion";
 import { textVariant } from "utils/motion";
 

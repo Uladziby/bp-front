@@ -1,14 +1,13 @@
 /** @format */
-
-import { ASection } from "components/ASection/ASection";
 import { PORTFOLIO_TITLE } from "utils/constatns";
-import { StyledCardsContainer, StyledContent, StyledSlider } from "./Portfolio.style";
 import { useMemo } from "react";
 import bg from "../../../../assets/about_me_photo.jpg";
 import portfolio_front from "../../../../assets/portfolio_front.jpg";
 import portfolio_back from "../../../../assets/protfolio_back.jpg";
 import { PortfolioCard } from "./PortfolioCard/PortfolioCard";
 import { IPortfolioCard } from "./type";
+import { ASlider } from "components/ASlider/ASlider";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
 
 export const Portfolio = () => {
 	const portfolioCard: IPortfolioCard[] = useMemo(
@@ -29,21 +28,21 @@ export const Portfolio = () => {
 				imageBefore: portfolio_front,
 				imageAfter: portfolio_back,
 			},
+			{
+				imageBefore: portfolio_front,
+				imageAfter: portfolio_back,
+			},
 		],
 		[]
 	);
 
 	return (
-		<ASection title={PORTFOLIO_TITLE}>
-			<StyledCardsContainer>
-				<StyledContent>
-					<StyledSlider>
-						{portfolioCard.map(({ imageBefore, imageAfter }, idx) => (
-							<PortfolioCard key={idx} imageBefore={imageBefore} imageAfter={imageAfter} />
-						))}
-					</StyledSlider>
-				</StyledContent>
-			</StyledCardsContainer>
-		</ASection>
+		<AMotionSection title={PORTFOLIO_TITLE}>
+			<ASlider>
+				{portfolioCard.map(({ imageBefore, imageAfter }, idx) => (
+					<PortfolioCard key={idx} imageBefore={imageBefore} imageAfter={imageAfter} />
+				))}
+			</ASlider>
+		</AMotionSection>
 	);
 };

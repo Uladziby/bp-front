@@ -2,7 +2,7 @@
 import classes from "./MyServices.module.css";
 import { CardsContainer } from "./MyServices.style";
 import ServiceCard from "./ServiceCard";
-import bg from "../../../../assets/about_me_photo.jpg";
+import bg from "../../../../assets/katrix_2.jpg";
 import { IServiceCard } from "./type";
 import { MY_SERVICES } from "utils/constatns";
 import { useMemo } from "react";

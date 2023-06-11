@@ -16,6 +16,7 @@ export const AButton = ({
 	className,
 	dataTestId,
 	isWithMotion = false,
+	ishidden,
 }: IAButtonProps) => (
 	<StyledButton
 		{...buttonWithMotion(isWithMotion)}
@@ -28,6 +29,7 @@ export const AButton = ({
 		type={type}
 		className={className}
 		isActive={isActive}
+		$ishidden={ishidden}
 	>
 		{children}
 	</StyledButton>
