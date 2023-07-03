@@ -1,10 +1,10 @@
 /** @format */
 import classes from "./MyServices.module.css";
-import { CardsContainer } from "./MyServices.style";
-import ServiceCard from "./ServiceCard";
+import { CardsContainer, StyledAMotionSection } from "./MyServices.style";
+import ServiceCard from "./ServiceCard/ServiceCard";
 import bg from "../../../../assets/katrix_2.jpg";
 import { IServiceCard } from "./type";
-import { MY_SERVICES } from "utils/constatns";
+import { MY_SERVICES, SERVICES_TAG } from "utils/constatns";
 import { useMemo } from "react";
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import { textVariant } from "utils/motion";
@@ -14,31 +14,25 @@ export const MyServices = () => {
 		() => [
 			{
 				backgroundImage: bg,
-				title: "Title 1",
-				subtitle: "services",
-				context:
-					"Аудирование для многих, пожалуй, самый сложный навык. Понять иностранную речь бывает",
+				title: "Типирование + LookBook ",
+				context: "85 $/215 BYN",
 			},
 			{
 				backgroundImage: bg,
-				title: "Title 2",
-				subtitle: "services",
-				context:
-					"Аудирование для многих, пожалуй, самый сложный навык. Понять иностранную речь бывает",
+				title: "Типирование + Оформление портретной зоны",
+				context: "85 $/215 BYN",
 			},
 			{
 				backgroundImage: bg,
-				title: "Title 3",
-				subtitle: "services",
-				context:
-					"Аудирование для многих, пожалуй, самый сложный навык. Понять иностранную речь бывает",
+				title: "Определение колорита внешности",
+				context: "85 $/215 BYN",
 			},
 		],
 		[]
 	);
 
 	return (
-		<AMotionSection title={MY_SERVICES}>
+		<StyledAMotionSection title={MY_SERVICES} id={SERVICES_TAG}>
 			<CardsContainer className={classes.card_grid} width={300} variants={textVariant()}>
 				{serviceCards.map(({ title, subtitle, backgroundImage, context }) => (
 					<ServiceCard
@@ -51,6 +45,6 @@ export const MyServices = () => {
 					/>
 				))}
 			</CardsContainer>
-		</AMotionSection>
+		</StyledAMotionSection>
 	);
 };

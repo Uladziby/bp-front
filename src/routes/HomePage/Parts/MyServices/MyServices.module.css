@@ -26,6 +26,11 @@
 	filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
+.card_grid:hover > .card:not(:hover) .card__content > h2 {
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 .card__content {
 	left: 0;
 	padding: var(--spacing-l);

@@ -1,10 +1,10 @@
 /** @format */
 
-import { ASection } from "components/ASection/ASection";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StyledASection = styled(ASection)`
+export const StyledAMotionSection = styled(AMotionSection)`
 	background-color: ${({ theme }) => theme.colors.gray3};
 `;
 
@@ -15,6 +15,10 @@ export const CardsContainer = styled(motion.div)<{ width: number }>`
 	&:hover {
 		.card:not(:hover) .card__background {
 			filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+		}
+		.card:not(:hover) .card__content h2 {
+			color: transparent;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 		}
 	}
 
@@ -30,36 +34,6 @@ export const CardsContainer = styled(motion.div)<{ width: number }>`
 	@media (min-width: 1250px) {
 		grid-template-columns: repeat(3, ${({ width }) => `${width}px`});
 	}
-`;
-
-export const StyledCard = styled.div.attrs((props) => ({ className: props.className }))<{
-	width: number;
-	heigth?: number;
-}>`
-	list-style: none;
-	position: relative;
-
-	${({ width, heigth }) =>
-		heigth
-			? { width: `${width}px`, height: `${heigth}px` }
-			: { width: `${width}px`, height: `${width}px` }};
-
-	&:hover .card__background {
-		transform: scale(1.05) translateZ(0);
-	}
-
-	&::before {
-		content: "";
-		display: block;
-		padding-bottom: 150%;
-	}
-`;
-
-export const StyledCardContent = styled.div`
-	left: 0;
-	padding: var(--spacing-l);
-	position: absolute;
-	top: 0;
 `;
 
 export const StyledBackground = styled.div.attrs((props) => ({ className: props.className }))<{

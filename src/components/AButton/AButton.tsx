@@ -10,7 +10,7 @@ export const AButton = ({
 	variant,
 	isDisabled,
 	size,
-	isActive,
+	$isActive,
 	iconTitle,
 	type = "button",
 	className,
@@ -28,7 +28,7 @@ export const AButton = ({
 		size={size}
 		type={type}
 		className={className}
-		isActive={isActive}
+		$isActive={$isActive}
 		$ishidden={ishidden}
 	>
 		{children}

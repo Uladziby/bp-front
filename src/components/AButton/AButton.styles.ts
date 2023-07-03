@@ -72,7 +72,7 @@ const SIZE = {
 export const StyledButton = styled(motion.button)<{
 	variant?: "primary" | "secondary";
 	size?: "extraSmall" | "small" | "medium" | "large";
-	isActive?: boolean;
+	$isActive?: boolean;
 	$ishidden?: boolean;
 }>`
 	all: unset;
@@ -90,7 +90,7 @@ export const StyledButton = styled(motion.button)<{
 
 	${({ variant }) => variant && VARIANT[variant]};
 	${({ size }) => size && SIZE[size]};
-	fill: ${({ isActive }) => (isActive ? basicWhite : defaultFill)};
+	fill: ${({ $isActive }) => ($isActive ? basicWhite : defaultFill)};
 	${({ variant }) => variant && VARIANT[variant]};
 	visibility: ${({ $ishidden }) => (!$ishidden ? "visible" : "hidden")};
 

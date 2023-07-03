@@ -9,11 +9,13 @@ interface AMotionSectionProps {
 	children: ReactNode;
 	className?: string;
 	title?: string;
+	id?: string;
 }
 
-export const AMotionSection = ({ children, className, title }: AMotionSectionProps) => {
+export const AMotionSection = ({ children, className, title, id }: AMotionSectionProps) => {
 	return (
 		<StyledContainer
+			id={id}
 			className={className}
 			variants={staggerContainer()}
 			initial="hidden"

@@ -1,14 +1,15 @@
 /** @format */
 
-import { AboutMePhoto, StyledAMotionSection, StyledATitle, StyledBlock } from "./AboutMe.styles";
-import { ABOUTME_TITLE, ABOUTME_TEXT } from "utils/constatns";
+import { AboutMePhoto, StyledATitle, StyledBlock } from "./AboutMe.styles";
+import { ABOUTME_TITLE, ABOUTME_TEXT, ABOUT_TAG } from "utils/constatns";
 import background from "../../../../assets/katrix_1.jpg";
 import { motion } from "framer-motion";
 import { textVariant } from "utils/motion";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
 
 export const AboutMe = () => {
 	return (
-		<StyledAMotionSection>
+		<AMotionSection id={ABOUT_TAG}>
 			<StyledBlock variants={textVariant()}>
 				<AboutMePhoto src={background} alt="about_me" />
 			</StyledBlock>
@@ -22,6 +23,6 @@ export const AboutMe = () => {
 					</StyledATitle>
 				</motion.div>
 			</StyledBlock>
-		</StyledAMotionSection>
+		</AMotionSection>
 	);
 };

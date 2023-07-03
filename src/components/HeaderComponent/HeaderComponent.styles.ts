@@ -2,15 +2,14 @@
 
 import ADropdownMenu from "components/ADropdownMenu/ADropdownMenu";
 import { WIDTH_XL } from "./../../globalStyles";
-/** @format */
-import { NavLink } from "react-router-dom";
+import { NavHashLink as Link } from "react-router-hash-link";
 import styled from "styled-components";
 
 export const StyledContainer = styled.header<{ $isScrolling: boolean }>`
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 100;
 	width: 100%;
 	transition: background-color 0.5s;
 	background-color: ${(props) => props.theme.colors.gray5};
@@ -56,7 +55,7 @@ export const StyledList = styled.ul`
 	}
 `;
 
-export const StyledListElement = styled(NavLink)`
+export const StyledListElement = styled(Link)`
 	display: flex;
 	justify-content: center;
 	align-items: center;

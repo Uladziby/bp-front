@@ -11,7 +11,7 @@ export interface IAButtonProps {
 	type?: "button" | "submit" | "reset";
 	link?: string;
 	className?: string;
-	isActive?: boolean;
+	$isActive?: boolean;
 	iconTitle?: string;
 	dataTestId?: string;
 	isWithMotion?: boolean;

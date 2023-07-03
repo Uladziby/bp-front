@@ -1,7 +1,7 @@
 /** @format */
 
-import { styled } from "styled-components";
 import { Content } from "@radix-ui/react-hover-card";
+import styled from "styled-components";
 
 export const StyledHoverCard = styled(Content)`
 	border-radius: 6px;

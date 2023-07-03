@@ -1,5 +1,5 @@
 /** @format */
-import { PORTFOLIO_TITLE } from "utils/constatns";
+import { PORTFOLIO_TAG, PORTFOLIO_TITLE } from "utils/constatns";
 import { useMemo } from "react";
 import bg from "../../../../assets/about_me_photo.jpg";
 import portfolio_front from "../../../../assets/portfolio_front.jpg";
@@ -37,7 +37,7 @@ export const Portfolio = () => {
 	);
 
 	return (
-		<AMotionSection title={PORTFOLIO_TITLE}>
+		<AMotionSection title={PORTFOLIO_TITLE} id={PORTFOLIO_TAG}>
 			<ASlider>
 				{portfolioCard.map(({ imageBefore, imageAfter }, idx) => (
 					<PortfolioCard key={idx} imageBefore={imageBefore} imageAfter={imageAfter} />

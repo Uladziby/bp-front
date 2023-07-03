@@ -3,12 +3,6 @@
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
 import { motion } from "framer-motion";
-import { AMotionSection } from "components/AMotionSection/AMotionSection";
-
-export const StyledAMotionSection = styled(AMotionSection)`
-	display: flex;
-	flex-direction: row;
-`;
 
 export const AboutMePhoto = styled.img`
 	object-fit: cover;
