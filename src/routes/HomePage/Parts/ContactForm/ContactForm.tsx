@@ -18,13 +18,15 @@ import { useEffect, useState } from "react";
 import { ATextarea } from "components/ATextarea/ATextarea";
 import { MESSAGE_SENDED } from "utils/message";
 
-const serviceId = process.env.REACT_APP_SERVICEID_EMAILJS;
-const templateId = process.env.REACT_APP_TEMPLATEID_EMAILJS;
-const email = process.env.REACT_APP_EMAIL_EMAILJS;
-const publicKey = process.env.REACT_APP_EMAILJS_KEY;
-const name = "Uladzik";
-
 export const ContactForm = () => {
+	const dataEmailJS = {
+		serviceId: process.env.REACT_APP_SERVICEID_EMAILJS,
+		templateId: process.env.REACT_APP_TEMPLATEID_EMAILJS,
+		email: process.env.REACT_APP_EMAIL_EMAILJS,
+		publicKey: "qW5mwagZJtDg1IgkI",
+		name: "Uladzik",
+	};
+
 	const [loading, setLoading] = useState<boolean>(false);
 	const [message, setMessage] = useState<string>("");
 
@@ -39,16 +41,16 @@ export const ContactForm = () => {
 
 		emailjs
 			.send(
-				serviceId,
-				templateId,
+				dataEmailJS.serviceId,
+				dataEmailJS.templateId,
 				{
 					from_name: form.name,
-					to_name: name,
+					to_name: dataEmailJS.name,
 					from_email: form.email,
-					to_email: email,
+					to_email: dataEmailJS.email,
 					message: form.message,
 				},
-				publicKey
+				dataEmailJS.publicKey
 			)
 			.then(
 				() => {

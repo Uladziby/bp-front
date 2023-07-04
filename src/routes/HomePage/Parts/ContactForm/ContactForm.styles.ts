@@ -16,7 +16,6 @@ export const StyledAButton = styled(AButton)`
 `;
 
 export const StyledContainer = styled.div`
-	padding: 2rem;
 	background-color: ${({ theme }) => theme.colors.gray4};
 `;
 

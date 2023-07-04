@@ -2,7 +2,7 @@
 
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
-import { motion } from "framer-motion";
+import { AMotionSection } from "components/AMotionSection/AMotionSection";
 
 export const AboutMePhoto = styled.img`
 	object-fit: cover;
@@ -12,12 +12,14 @@ export const AboutMePhoto = styled.img`
 
 export const StyledATitle = styled(ATitle)`
 	display: flex;
+	width: 60%;
 	color: ${({ theme }) => theme.colors.mauve12};
 `;
 
-export const StyledBlock = styled(motion.div)`
+export const StyledAMotionSection = styled(AMotionSection)`
 	display: flex;
-	flex: 1;
-	flex-direction: column;
-	max-height: 600px;
+`;
+
+export const StyledAboutMePhoto = styled(AboutMePhoto)`
+	width: 40%;
 `;

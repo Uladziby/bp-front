@@ -4,7 +4,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import "./styles.css";
 import { INavList } from "components/HeaderComponent/type";
-import { StyledNavHashLink } from "./ADropdownMenu.styles";
+import { StyledDropDownMenuContent, StyledNavHashLink } from "./ADropdownMenu.styles";
 
 interface ADropdownMenuProps {
 	children: INavList[];
@@ -21,7 +21,7 @@ const ADropdownMenu = ({ children, className }: ADropdownMenuProps) => {
 			</DropdownMenu.Trigger>
 
 			<DropdownMenu.Portal>
-				<DropdownMenu.Content className="DropdownMenuContent" sideOffset={5} style={{ zIndex: 2 }}>
+				<StyledDropDownMenuContent className="DropdownMenuContent" sideOffset={5}>
 					{children.map(({ title, href }) => (
 						<DropdownMenu.Item key={title} className="DropdownMenuItem">
 							<StyledNavHashLink to={`#${href}`} smooth>
@@ -30,7 +30,7 @@ const ADropdownMenu = ({ children, className }: ADropdownMenuProps) => {
 						</DropdownMenu.Item>
 					))}
 					<DropdownMenu.Arrow className="DropdownMenuArrow" />
-				</DropdownMenu.Content>
+				</StyledDropDownMenuContent>
 			</DropdownMenu.Portal>
 		</DropdownMenu.Root>
 	);

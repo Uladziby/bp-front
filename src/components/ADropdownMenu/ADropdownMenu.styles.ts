@@ -2,6 +2,7 @@
 
 import { styled } from "styled-components";
 import { NavHashLink } from "react-router-hash-link";
+import { Content, Portal } from "@radix-ui/react-dropdown-menu";
 
 export const StyledNavHashLink = styled(NavHashLink)`
 	position: relative;
@@ -20,4 +21,10 @@ export const StyledNavHashLink = styled(NavHashLink)`
 	&:hover {
 		color: ${({ theme }) => theme.colors.mauve2};
 	}
+`;
+
+export const StyledDropDownMenuContent = styled(Content)`
+	min-width: 120px;
+	position: relative;
+	z-index: 100;
 `;

@@ -1,4 +1,5 @@
 /** @format */
+import { WIDTH_L, WIDTH_M, WIDTH_S } from "globalStyles";
 import styled from "styled-components";
 import { COLOR_PALETTE, INPUT_COLORS } from "utils/colors";
 
@@ -25,6 +26,14 @@ export const StyledInput = styled.input`
 	::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
+	}
+
+	@media screen and (max-width: ${WIDTH_L}) {
+		width: 280px;
+	}
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		width: 250px;
 	}
 `;
 

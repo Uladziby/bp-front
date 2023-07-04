@@ -7,7 +7,8 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 2rem;
+	gap: 4px;
+
 	svg {
 		color: ${(props) => props.theme.colors.indigo11};
 	}

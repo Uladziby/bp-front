@@ -22,11 +22,11 @@ export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
 
 	const navList: INavList[] = [
-		{ href: "about", title: "О мне" },
-		{ href: "contact", title: "Контакты" },
+		{ href: "about", title: "Обо мне" },
 		{ href: "services", title: "Мои услуги" },
-		{ href: "opinions", title: "Отзывы" },
 		{ href: "portfolio", title: "Портфолио" },
+		{ href: "contact", title: "Контакт" },
+		{ href: "opinions", title: "Отзывы" },
 	];
 
 	const { currentTheme, setCurrentTheme } =
@@ -42,7 +42,6 @@ export const HeaderComponent = () => {
 				<StyledLogo $isScrolling={isScrolling}>
 					<Logo />
 				</StyledLogo>
-				<StyledADropdownMenu>{navList}</StyledADropdownMenu>
 				<StyledList>
 					{navList.map(({ href, title }, idx) => {
 						return (
@@ -52,10 +51,11 @@ export const HeaderComponent = () => {
 						);
 					})}
 				</StyledList>
-				<AButton variant="primary" size="small">
+				<AButton variant="primary" size="small" ishidden>
 					{SIGN_UP}
 				</AButton>
 				<ASwitch onSwitchHandler={onChangeThemeHadler} />
+				<StyledADropdownMenu>{navList}</StyledADropdownMenu>
 			</StyledNavBar>
 		</StyledContainer>
 	);
