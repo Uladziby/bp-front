@@ -7,10 +7,11 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 4px;
+	justify-content: center;
+	gap: 8px;
 
 	svg {
-		color: ${(props) => props.theme.colors.indigo11};
+		color: ${(props) => props.theme.colors.mauve12};
 	}
 `;
 
@@ -29,7 +30,7 @@ export const StyledRoot = styled(Root)<SwitchRootProps>`
 	width: 44px;
 	height: 24px;
 
-	background-color: ${(props) => props.theme.colors.indigo12};
+	background-color: ${(props) => props.theme.colors.mauve12};
 	border-radius: 9999px;
 	position: relative;
 	box-shadow: 0 2px 10px var(--blackA7);
@@ -46,7 +47,7 @@ export const StyledThumb = styled(SwitchThumb)`
 	display: block;
 	width: 21px;
 	height: 21px;
-	background-color: ${(props) => props.theme.colors.indigo11};
+	background-color: ${(props) => props.theme.colors.mauve2};
 	border-radius: 9999px;
 	box-shadow: 0 2px 2px var(--blackA7);
 	transition: transform 100ms;

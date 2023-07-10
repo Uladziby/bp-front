@@ -5,6 +5,7 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import "./styles.css";
 import { INavList } from "components/HeaderComponent/type";
 import { StyledDropDownMenuContent, StyledNavHashLink } from "./ADropdownMenu.styles";
+import { ASwitch } from "components/ASwitch/ASwitch";
 
 interface ADropdownMenuProps {
 	children: INavList[];
@@ -29,6 +30,8 @@ const ADropdownMenu = ({ children, className }: ADropdownMenuProps) => {
 							</StyledNavHashLink>
 						</DropdownMenu.Item>
 					))}
+					<ASwitch />
+
 					<DropdownMenu.Arrow className="DropdownMenuArrow" />
 				</StyledDropDownMenuContent>
 			</DropdownMenu.Portal>

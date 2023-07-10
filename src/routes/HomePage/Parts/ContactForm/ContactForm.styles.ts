@@ -22,7 +22,6 @@ export const StyledContainer = styled.div`
 export const StyledBlock = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 1rem;
 `;
 
 export const StyledATitle = styled(ATitle)`

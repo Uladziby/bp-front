@@ -20,6 +20,8 @@ export const FooterLink = styled.a`
 `;
 
 export const SocialIcons = styled.div`
+	display: flex;
+	justify-content: center;
 	margin-top: 10px;
 `;
 
@@ -30,11 +32,16 @@ export const StyledIconLink = styled.a`
 	text-decoration: none;
 	margin-right: 10px;
 	gap: 1rem;
+
+	& > svg {
+		fill: ${({ theme }) => theme.colors.mauve12};
+	}
+
+	&:hover > svg {
+		fill: ${({ theme }) => theme.colors.indigo11};
+	}
 `;
 
 export const StyledATitle = styled(ATitle)`
 	font-size: 1.5rem;
-	&:hover {
-		color: ${({ theme }) => theme.colors.indigo11};
-	}
 `;

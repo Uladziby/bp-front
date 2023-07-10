@@ -25,3 +25,5 @@ export const WIDTH_M = "480px";
 export const WIDTH_L = "760px";
 export const WIDTH_XL = "960px";
 export const WIDTH_XXL = "1200px";
+export const WIDTH_XL_NUM = 960;
+export const WIDTH_L_NUM = 760;

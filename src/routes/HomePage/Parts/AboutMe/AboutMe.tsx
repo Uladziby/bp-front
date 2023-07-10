@@ -2,7 +2,7 @@
 
 import { StyledAMotionSection, StyledATitle, StyledAboutMePhoto } from "./AboutMe.styles";
 import { ABOUTME_TITLE, ABOUTME_TEXT, ABOUT_TAG } from "utils/constatns";
-import background from "../../../../assets/katrix_1.jpg";
+import background from "assets/katrix_1.jpg";
 
 export const AboutMe = () => {
 	return (

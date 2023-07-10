@@ -1,6 +1,4 @@
 /** @format */
-
-import { useContext } from "react";
 import {
 	StyledADropdownMenu,
 	StyledContainer,
@@ -9,32 +7,33 @@ import {
 	StyledLogo,
 	StyledNavBar,
 } from "./HeaderComponent.styles";
-import { ASwitch } from "components/ASwitch/ASwitch";
-import { DefaultTheme, ThemeContext } from "styled-components";
-import { ThemeEnum } from "utils/themes";
 import { useScrollingHeader } from "utils/CustomHooks/useScrollingHeader";
 import { AButton } from "components/AButton/AButton";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { INavList } from "./type";
-import { SIGN_UP } from "utils/constatns";
+import {
+	ABOUT_TAG,
+	CONTACT_TAG,
+	PORTFOLIO_TAG,
+	SERVICES_TAG,
+	SIGN_UP,
+	TESTIMONIALS_TAG,
+} from "utils/constatns";
+import { ASwitch } from "components/ASwitch/ASwitch";
+import { useWindowSize } from "utils/CustomHooks/useWindowSize";
+import { WIDTH_XL_NUM } from "globalStyles";
 
 export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
+	const { width } = useWindowSize();
 
 	const navList: INavList[] = [
-		{ href: "about", title: "Обо мне" },
-		{ href: "services", title: "Мои услуги" },
-		{ href: "portfolio", title: "Портфолио" },
-		{ href: "contact", title: "Контакт" },
-		{ href: "opinions", title: "Отзывы" },
+		{ href: ABOUT_TAG, title: "Обо мне" },
+		{ href: SERVICES_TAG, title: "Мои услуги" },
+		{ href: PORTFOLIO_TAG, title: "Портфолио" },
+		{ href: CONTACT_TAG, title: "Контакт" },
+		{ href: TESTIMONIALS_TAG, title: "Отзывы" },
 	];
-
-	const { currentTheme, setCurrentTheme } =
-		useContext<DefaultTheme | undefined>(ThemeContext) || {};
-
-	const onChangeThemeHadler = () => {
-		setCurrentTheme(currentTheme === ThemeEnum.light ? ThemeEnum.dark : ThemeEnum.light);
-	};
 
 	return (
 		<StyledContainer $isScrolling={isScrolling}>
@@ -54,7 +53,7 @@ export const HeaderComponent = () => {
 				<AButton variant="primary" size="small" ishidden>
 					{SIGN_UP}
 				</AButton>
-				<ASwitch onSwitchHandler={onChangeThemeHadler} />
+				{width >= WIDTH_XL_NUM ? <ASwitch /> : null}
 				<StyledADropdownMenu>{navList}</StyledADropdownMenu>
 			</StyledNavBar>
 		</StyledContainer>

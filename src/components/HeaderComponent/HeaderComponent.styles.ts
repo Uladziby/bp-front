@@ -1,9 +1,10 @@
 /** @format */
 
+import styled from "styled-components";
 import ADropdownMenu from "components/ADropdownMenu/ADropdownMenu";
 import { WIDTH_XL } from "./../../globalStyles";
 import { NavHashLink as Link } from "react-router-hash-link";
-import styled from "styled-components";
+import { ASwitch } from "components/ASwitch/ASwitch";
 
 export const StyledContainer = styled.header<{ $isScrolling: boolean }>`
 	position: fixed;
@@ -22,7 +23,7 @@ export const StyledNavBar = styled.nav<{ $isScrolling: boolean }>`
 	align-items: center;
 	justify-content: space-between;
 	margin-inline: auto;
-	padding-inline: 1.5rem;
+	padding: 0 3rem;
 	height: 10rem;
 	gap: 1rem;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.05);
@@ -39,7 +40,8 @@ export const StyledLogo = styled.a<{ $isScrolling: boolean }>`
 	cursor: pointer;
 
 	& svg {
-		height: ${({ $isScrolling }) => ($isScrolling ? "44px" : "80px")};
+		padding-top: ${({ $isScrolling }) => ($isScrolling ? "15px" : "")};
+		fill: ${({ theme }) => theme.colors.mauve12};
 	}
 `;
 
@@ -83,3 +85,5 @@ export const StyledADropdownMenu = styled(ADropdownMenu)`
 		display: none;
 	}
 `;
+
+export const StyledASwitch = styled(ASwitch)``;

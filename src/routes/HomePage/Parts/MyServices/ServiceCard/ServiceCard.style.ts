@@ -7,7 +7,9 @@ import { COLOR_PALETTE } from "utils/colors";
 export const StyledATitle = styled(ATitle)<{ isBlur: boolean }>`
 	display: flex;
 	justify-content: center;
+	text-align: center;
 	color: ${COLOR_PALETTE.white};
+	margin: 0;
 `;
 
 export const StyledCardContent = styled.div<{ $heightContent: number }>`
@@ -16,7 +18,7 @@ export const StyledCardContent = styled.div<{ $heightContent: number }>`
 	flex-direction: column;
 	justify-content: space-between;
 
-	height: ${({ $heightContent }) => `${$heightContent - 50}px`};
+	min-height: ${({ $heightContent }) => `${$heightContent - 50}px`};
 	left: 0;
 	padding: var(--spacing-l);
 	top: 0;
@@ -36,7 +38,7 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 			: { width: `${width}px`, height: `${width}px` }};
 
 	&:hover .card__background {
-		transform: scale(1.05) translateZ(0);
+		transform: scale(1.1) translateZ(0);
 	}
 
 	&::before {
@@ -44,4 +46,22 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 		display: block;
 		padding-bottom: 150%;
 	}
+`;
+
+export const StyledList = styled.ul`
+	list-style: inside;
+	list-style-position: outside;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 1rem;
+	margin: 0;
+	padding: 1rem;
+`;
+
+export const StyledListItem = styled.li`
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 400;
+	color: ${COLOR_PALETTE.white};
 `;

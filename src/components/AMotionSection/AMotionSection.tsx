@@ -22,7 +22,7 @@ export const AMotionSection = ({ children, className, title, id }: AMotionSectio
 			whileInView="show"
 			viewport={{ once: false, amount: 0.25 }}
 		>
-			<StyledATitle size={32} weight={700} lineHeight={36}>
+			<StyledATitle size={28} weight={700} lineHeight={36}>
 				{title}
 			</StyledATitle>
 			<StyledContent variants={textVariant()}>{children}</StyledContent>

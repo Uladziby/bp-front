@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const StyledContainer = styled(motion.section)`
 	display: flex;
-	padding: 5rem 5%;
+	padding: 10rem 5%;
 	flex-direction: column;
 	gap: 1rem;
 	background-color: ${({ theme }) => theme.colors.gray2};

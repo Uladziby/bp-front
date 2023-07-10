@@ -20,6 +20,10 @@ export const CardsContainer = styled(motion.div)<{ width: number }>`
 			color: transparent;
 			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 		}
+		.card:not(:hover) .card__content ul li {
+			color: transparent;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
 	}
 
 	@media (min-width: 320px) {

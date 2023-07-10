@@ -5,10 +5,10 @@ import {
 	FooterLink,
 	StyledIconLink,
 	SocialIcons,
-	StyledATitle,
 } from "./Footer.styles";
 import { ReactComponent as TelegramIcon } from "assets/icons/telegram.svg";
-import { ReactComponent as InstaIcon } from "assets/icons/insta.svg";
+import { ReactComponent as InstaIcon } from "assets/icons/instagram.svg";
+import { ReactComponent as MailIcon } from "assets/icons/envelope.svg";
 
 export const Footer: React.FC = () => {
 	return (
@@ -16,20 +16,18 @@ export const Footer: React.FC = () => {
 			<SocialIcons>
 				<StyledIconLink href="https://www.instagram.com/yanushevskaja/" target="_blank">
 					<InstaIcon />
-					<StyledATitle size={18} weight={400} lineHeight={24}>
-						@yanushevskaja
-					</StyledATitle>
 				</StyledIconLink>
 				<StyledIconLink href="https://t.me/Katarzyna_y" target="_blank">
 					<TelegramIcon />
-					<StyledATitle size={18} weight={400} lineHeight={24}>
-						@Katarzyna_y
-					</StyledATitle>
+				</StyledIconLink>
+				<StyledIconLink href="mailto:katrina0203@mail.ru" target="_blank">
+					<MailIcon />
 				</StyledIconLink>
 			</SocialIcons>
+
 			<FooterText>
 				© {new Date().getFullYear()} K.Yanushevskaya | Powered by{" "}
-				<FooterLink href="https://www.example.com">FlexDesignStudio</FooterLink>
+				<FooterLink href="https://www.flexdesignstudio.com/">FlexDesignStudio</FooterLink>
 			</FooterText>
 		</FooterContainer>
 	);

@@ -3,22 +3,26 @@ import { StyledBackground } from "../MyServices.style";
 import { ServiceCardProps } from "../type";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import { HoverServiceCard } from "../HoverServiceCard/HoverServiceCard";
-import { StyledATitle, StyledCard, StyledCardContent } from "./ServiceCard.style";
+import {
+	StyledATitle,
+	StyledCard,
+	StyledCardContent,
+	StyledList,
+	StyledListItem,
+} from "./ServiceCard.style";
 
 const ServiceCard = ({
 	backgroundImage,
 	context,
 	title,
-	subtitle,
 	width,
 	height,
+	description,
 }: ServiceCardProps) => {
 	return (
 		/* 	<HoverCard.Root>
 			<HoverCard.Trigger asChild>
-				
 			</HoverCard.Trigger>
-
 			<HoverCard.Portal>
 				<HoverServiceCard />
 			</HoverCard.Portal>
@@ -27,11 +31,15 @@ const ServiceCard = ({
 		<StyledCard className="card" width={width} heigth={height}>
 			<StyledBackground background={backgroundImage} className="card__background" />
 			<StyledCardContent $heightContent={width} className="card__content">
-				<StyledATitle size={20} weight={400} lineHeight={36} isBlur={true}>
+				<StyledATitle size={18} weight={400} lineHeight={36} isBlur={true}>
 					{title}
 				</StyledATitle>
-				<StyledATitle size={18} weight={400} lineHeight={36} isBlur={true}>
-					Price :<br />
+				<StyledList>
+					{description?.map((item, idx) => (
+						<StyledListItem key={idx}>{item}</StyledListItem>
+					))}
+				</StyledList>
+				<StyledATitle size={16} weight={400} lineHeight={36} isBlur={true}>
 					{context}
 				</StyledATitle>
 			</StyledCardContent>
