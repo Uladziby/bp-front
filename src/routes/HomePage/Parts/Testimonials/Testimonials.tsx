@@ -1,7 +1,13 @@
 /** @format */
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import { useEffect, useRef } from "react";
-import { TESTIMONIALS_TAG, TESTIMONIALS_TITLE } from "utils/constatns";
+import {
+	TESTIMONIALS_TAG,
+	TESTIMONIALS_TITLE,
+	TESTI_ClIENT1,
+	TESTI_ClIENT2,
+	TESTI_ClIENT3,
+} from "utils/constatns";
 import { ATestimonialsProps } from "./Parts/type";
 import { ATestimonials } from "./Parts/ATestimonial";
 import { StyledContext, StyledWrapper } from "./Testimonials.style";
@@ -9,9 +15,21 @@ import { useWindowSize } from "utils/CustomHooks/useWindowSize";
 import { WIDTH_L_NUM } from "globalStyles";
 
 const mockTesti: Omit<ATestimonialsProps, "widthItem">[] = [
-	{ text: " dsdasdasdasd", author: "Екатерина Якуш", date: "21.23.1222" },
-	{ text: "Вsdasdasdasd вфывыфв рророоорррорф орпопро", author: "Иван Иванов", date: "21.23.1222" },
-	{ text: "Вsdasdasdasd вфывыфв рророоорррорф орпопро", author: "Иван Иванов", date: "21.23.1222" },
+	{
+		text: TESTI_ClIENT1,
+		author: "Екатерина Якуш",
+		date: "21.23.1222",
+	},
+	{
+		text: TESTI_ClIENT2,
+		author: "Иван Иванов",
+		date: "21.23.1222",
+	},
+	{
+		text: TESTI_ClIENT3,
+		author: "Иван Иванов",
+		date: "21.23.1222",
+	},
 ];
 
 export const Testimonials = () => {

@@ -32,9 +32,12 @@ export const StyledATitle = styled(ATitle)`
 
 export const StyledText = styled(ATitle)`
 	padding: 0 3rem;
+	font-size: 2rem;
+	line-height: 14px;
 
 	@media screen and (max-width: ${WIDTH_L}) {
-		font-size: 2rem;
+		font-size: 1.2rem;
+		line-height: 10px;
 	}
 `;
 

@@ -2,11 +2,12 @@
 
 import styled from "styled-components";
 
-export const StyledContainer = styled.div`
-	padding: 5rem 0;
+export const StyledContainer = styled.image`
+	padding: 18rem 0 5rem;
+	background: center;
 	background-size: 500px;
-	background-position: center;
 	opacity: 0.5;
 	height: 60vh;
+	background-repeat: no-repeat;
 	background-color: ${({ theme }) => theme.colors.gray2};
 `;

@@ -13,10 +13,10 @@ export const ATestimonials = ({ author, text, date, widthItem }: ATestimonialsPr
 	return (
 		<StyledContext $widthItem={widthItem}>
 			<StyledTestiField>
-				<StyledATitle size={14} lineHeight={18} weight={400}>
+				<StyledATitle size={10} lineHeight={8} weight={400}>
 					{date}
 				</StyledATitle>
-				<StyledText size={22} lineHeight={24} weight={400}>
+				<StyledText size={22} lineHeight={10} weight={400}>
 					{text}
 				</StyledText>
 			</StyledTestiField>
