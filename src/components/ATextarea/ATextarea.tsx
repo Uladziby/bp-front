@@ -65,7 +65,7 @@ export const ATextarea = ({
 					<DangerIcon />
 				</StyledErrorIcon>
 			)}
-			{field.value && !error && isShowCounter && (
+			{isShowCounter && (
 				<StyledCounter data-testid="counter">
 					{field.value.trim().length}/{maxLength}
 				</StyledCounter>

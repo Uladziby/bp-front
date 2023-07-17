@@ -14,7 +14,7 @@ export const AboutMePhoto = styled.img`
 
 export const StyledATitle = styled(ATitle)`
 	display: flex;
-	width: 60%;
+	width: 100%;
 	color: ${({ theme }) => theme.colors.mauve12};
 `;
 

@@ -1,9 +1,9 @@
 /** @format */
 import { PORTFOLIO_TAG, PORTFOLIO_TITLE } from "utils/constatns";
 import { useMemo } from "react";
-import bg from "../../../../assets/about_me_photo.jpg";
-import portfolio_front from "../../../../assets/portfolio_front.jpg";
-import portfolio_back from "../../../../assets/protfolio_back.jpg";
+import bg from "assets/about_me_photo.jpg";
+import portfolio_front from "assets/portfolio_front.jpg";
+import portfolio_back from "assets/protfolio_back.jpg";
 import { PortfolioCard } from "./PortfolioCard/PortfolioCard";
 import { IPortfolioCard } from "./type";
 import { ASlider } from "components/ASlider/ASlider";

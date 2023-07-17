@@ -48,7 +48,7 @@ export const StyledErrorIcon = styled.div`
 export const StyledCounter = styled.span`
 	align-self: flex-end;
 	font-size: 12px;
-	color: ${COLOR_PALETTE.yellow700};
+	color: ${COLOR_PALETTE.gray900};
 `;
 
 export const StyledErrorMessage = styled.div`

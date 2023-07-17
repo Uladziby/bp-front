@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StyledImage = styled.img<{ src: string }>`
 	object-fit: cover;
 	width: 100%;
-	height: 85%;
+	height: 100%;
 `;
 
 export const StyledContainer = styled.div<{ $width: number }>`

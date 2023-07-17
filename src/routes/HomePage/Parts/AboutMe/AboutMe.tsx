@@ -8,7 +8,7 @@ import { AspectRatioComponent } from "components/AspectRatio/AspectRatio";
 export const AboutMe = () => {
 	return (
 		<StyledAMotionSection id={ABOUT_TAG}>
-			<AspectRatioComponent image={AboutMePhoto} width={320} ratio={3 / 4} />
+			<AspectRatioComponent image={AboutMePhoto} width={220} ratio={3 / 4} />
 			<StyledATitle size={24} weight={400} lineHeight={36}>
 				{ABOUTME_TEXT}
 			</StyledATitle>

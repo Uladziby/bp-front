@@ -1,8 +1,8 @@
 /** @format */
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { AInput } from "components/AInput/AInput";
 import { CONTACT_TAG, CONTACT_TITLE, SEND, SENDING } from "utils/constatns";
-import { IContactForm } from "./type";
 import { useForm } from "react-hook-form";
 import { AForm } from "components/AForm/AForm";
 import { PaperPlaneIcon, RocketIcon } from "@radix-ui/react-icons";
@@ -15,10 +15,13 @@ import {
 import emailjs from "@emailjs/browser";
 import { useEffect, useMemo, useState } from "react";
 import { ATextarea } from "components/ATextarea/ATextarea";
-import { MESSAGE_ERROR, MESSAGE_SENDED } from "utils/message";
+import { MESSAGE_ERROR, MESSAGE_SENDED, contactFormErrors } from "utils/message";
 import { AToast } from "components/AToast/AToast";
 import { ReactComponent as IconChecked } from "assets/icons/checked.svg";
 import { ReactComponent as IconError } from "assets/icons/cross_cirkled.svg";
+import { z } from "zod";
+import { validationRegExp } from "utils/validationRegExp";
+import { emailDomainNameValidator } from "utils/emailDomainNameValidator";
 
 export const ContactForm = () => {
 	const dataEmailJS = useMemo(
@@ -32,18 +35,32 @@ export const ContactForm = () => {
 		[]
 	);
 
+	const { tooLongName, tooShortName, emptyField, incorrectEmail } = contactFormErrors;
 	const [loading, setLoading] = useState<boolean>(false);
 	const [message, setMessage] = useState<string>("");
 	const [open, setOpen] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string>("");
 
-	const form = useForm<IContactForm>({
-		mode: "onSubmit",
+	const FormSchema = z.object({
+		name: z.string().min(1, emptyField).min(2, tooShortName).max(50, tooLongName),
+		email: z
+			.string()
+			.min(1, tooShortName)
+			.regex(validationRegExp.EMAIL, incorrectEmail)
+			.refine(emailDomainNameValidator, incorrectEmail),
+		message: z.string().min(1, emptyField).min(2, tooShortName).max(200, tooLongName),
+	});
+
+	type FormSchemeType = z.infer<typeof FormSchema>;
+
+	const form = useForm<FormSchemeType>({
+		resolver: zodResolver(FormSchema),
+		mode: "onBlur",
 	});
 
 	const { reset } = form;
 
-	const onSbmit = (form: IContactForm) => {
+	const onSbmit = (form: FormSchemeType) => {
 		setLoading(true);
 
 		emailjs
@@ -93,7 +110,12 @@ export const ContactForm = () => {
 						placeholder="Твоя электронная почта"
 						label="Электронная почта"
 					/>
-					<ATextarea name="message" placeholder="Твое сообщение" label="Сообщение" />
+					<ATextarea
+						name="message"
+						placeholder="Твое сообщение"
+						maxLength={200}
+						label="Сообщение"
+					/>
 					<StyledBlock>
 						{loading ? (
 							<StyledAButton size="small" isDisabled variant="primary">

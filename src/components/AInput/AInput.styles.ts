@@ -1,5 +1,6 @@
 /** @format */
-import { WIDTH_L, WIDTH_M, WIDTH_S } from "globalStyles";
+import { AMessage } from "components/AMessage/AMessage";
+import { WIDTH_L, WIDTH_S } from "globalStyles";
 import styled from "styled-components";
 import { COLOR_PALETTE, INPUT_COLORS } from "utils/colors";
 
@@ -65,4 +66,8 @@ export const StyledErrorMessage = styled.div`
 	text-align: start;
 	font-size: 12px;
 	color: ${COLOR_PALETTE.error};
+`;
+
+export const StyledAMessage = styled(AMessage)`
+	margin-top: 8px;
 `;
