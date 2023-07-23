@@ -29,7 +29,7 @@ const titleStrengthLabels = {
 	strong: "Cильный пароль",
 };
 
-export const LoginForm = ({ title, nameSubmitButton }: LoginFormProps) => {
+export const LoginForm = ({ title, nameSubmitButton, onSubmitHandler }: LoginFormProps) => {
 	const [strength, setStrength] = useState<StrengthType>("weak");
 	const navigate = useNavigate();
 	const FormSchema = z.object({
@@ -60,7 +60,7 @@ export const LoginForm = ({ title, nameSubmitButton }: LoginFormProps) => {
 	const watchPassword = watch("password");
 
 	const onSubmit = (form: FormSchemeType) => {
-		console.log(form);
+		onSubmitHandler(form);
 		navigate(ACCOUNT_PAGE);
 	};
 

@@ -1,0 +1,8 @@
+# @format
+
+mutation login($account: UserLoginInput!) {
+	login(input: $account) {
+		email
+		password
+	}
+}

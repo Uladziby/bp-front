@@ -1,0 +1,13 @@
+# @format
+
+query QueryToken {
+	user {
+		_id
+		firstName
+		lastName
+		email
+		password
+		accessToken
+		refreshToken
+	}
+}

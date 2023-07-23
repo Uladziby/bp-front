@@ -49,28 +49,16 @@ export const ASlider = ({ children, widthItem, heightItem }: ISliderProps) => {
 	};
 
 	const onSlideRight = () => {
-<<<<<<< HEAD
 		setCurrentPosition(sliderRef.current.scrollTop + widthItem);
 
-=======
-		const nextPosition = sliderRef.current.scrollTop + widthCard;
-
-		setCurrentPosition(nextPosition);
->>>>>>> 8dca4c7 (feat : added LoginPage)
 		if (sliderRef.current) {
 			sliderRef.current.scrollBy({ top: widthItem, behavior: "smooth" });
 		}
 	};
 
 	const onSlideLeft = () => {
-<<<<<<< HEAD
 		setCurrentPosition(sliderRef.current.scrollTop - widthItem);
 
-=======
-		const nextPosition = sliderRef.current.scrollTop - widthCard;
-
-		setCurrentPosition(nextPosition);
->>>>>>> 8dca4c7 (feat : added LoginPage)
 		if (sliderRef.current) {
 			sliderRef.current.scrollBy({ top: -widthItem, behavior: "smooth" });
 		}
@@ -78,11 +66,7 @@ export const ASlider = ({ children, widthItem, heightItem }: ISliderProps) => {
 
 	useEffect(() => {
 		onScrollTargetCard();
-<<<<<<< HEAD
 	}, [currentPosition, width]);
-=======
-	}, [currentPosition]);
->>>>>>> 8dca4c7 (feat : added LoginPage)
 
 	return (
 		<StyledContainer $heightContent={heightItem} $widthVisiblePart={width}>

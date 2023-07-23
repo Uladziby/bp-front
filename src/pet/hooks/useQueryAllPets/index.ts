@@ -14,5 +14,6 @@ export interface IPets {
 export const useQueryAllPets = () => {
 	const { loading, error, data } = useQuery(queryAllPets);
 	const pets: IPets[] = data ? data.allPets : null;
+	console.log("pets", data);
 	return { loading, error, pets };
 };

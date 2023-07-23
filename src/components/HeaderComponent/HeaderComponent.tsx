@@ -22,13 +22,8 @@ import {
 import { ASwitch } from "components/ASwitch/ASwitch";
 import { useWindowSize } from "utils/CustomHooks/useWindowSize";
 import { WIDTH_XL_NUM } from "globalStyles";
-<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom";
 import { AUTH_PAGE } from "utils/path";
-=======
-import { AUTH_PAGE } from "utils/path";
-import { Link } from "react-router-dom";
->>>>>>> 8dca4c7 (feat : added LoginPage)
 
 export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
@@ -63,19 +58,11 @@ export const HeaderComponent = () => {
 						);
 					})}
 				</StyledList>
-<<<<<<< HEAD
-				{/* <Link to={AUTH_PAGE}>
-					<AButton variant="primary" size="small" ishidden isDisabled={false}>
-						{SIGN_UP}
-					</AButton>
-				</Link> */}
-=======
 				<Link to={AUTH_PAGE}>
-					<AButton variant="primary" size="small">
+					<AButton variant="primary" size="small" isDisabled={false}>
 						{SIGN_UP}
 					</AButton>
 				</Link>
->>>>>>> 8dca4c7 (feat : added LoginPage)
 
 				{width >= WIDTH_XL_NUM ? <ASwitch /> : null}
 				<StyledADropdownMenu>{navList}</StyledADropdownMenu>

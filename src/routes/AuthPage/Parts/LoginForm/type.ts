@@ -3,6 +3,7 @@
 export interface LoginFormProps {
 	title?: string;
 	nameSubmitButton: string;
+	onSubmitHandler: (form: ILoginForm) => void;
 }
 
 export enum StrongPasswordEnum {
@@ -17,3 +18,8 @@ export type StrengthObjectType = {
 };
 
 export type StrengthType = "weak" | "medium" | "strong";
+
+export interface ILoginForm {
+	email: string;
+	password: string;
+}

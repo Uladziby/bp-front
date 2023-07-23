@@ -1,0 +1,8 @@
+# @format
+
+query GetAllUsers {
+	users {
+		email
+		password
+	}
+}
