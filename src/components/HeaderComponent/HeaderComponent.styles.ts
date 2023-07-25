@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import ADropdownMenu from "components/ADropdownMenu/ADropdownMenu";
 import { WIDTH_XL } from "./../../globalStyles";
-import { NavHashLink as Link } from "react-router-hash-link";
+import { NavHashLink as NavHashLink } from "react-router-hash-link";
 import { ASwitch } from "components/ASwitch/ASwitch";
 
 export const StyledContainer = styled.header<{ $isScrolling: boolean }>`
@@ -57,7 +57,7 @@ export const StyledList = styled.ul`
 	}
 `;
 
-export const StyledListElement = styled(Link)`
+export const StyledListElement = styled(NavHashLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,8 +69,8 @@ export const StyledListElement = styled(Link)`
 
 	color: ${({ theme }) => theme.colors.mauve12};
 
-	&.active {
-		text-decoration-color: ${(props) => props.theme.colors.slate11};
+	&.activePath {
+		color: ${({ theme }) => theme.colors.indigo11};
 	}
 
 	&:hover {

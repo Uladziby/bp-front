@@ -22,10 +22,13 @@ import {
 import { ASwitch } from "components/ASwitch/ASwitch";
 import { useWindowSize } from "utils/CustomHooks/useWindowSize";
 import { WIDTH_XL_NUM } from "globalStyles";
+import { Link, useLocation } from "react-router-dom";
+import { AUTH_PAGE } from "utils/path";
 
 export const HeaderComponent = () => {
 	const isScrolling = useScrollingHeader();
 	const { width } = useWindowSize();
+	let location = useLocation();
 
 	const navList: INavList[] = [
 		{ href: ABOUT_TAG, title: "Обо мне" },
@@ -44,15 +47,23 @@ export const HeaderComponent = () => {
 				<StyledList>
 					{navList.map(({ href, title }, idx) => {
 						return (
-							<StyledListElement key={idx} to={`#${href}`} smooth>
+							<StyledListElement
+								key={idx}
+								to={`#${href}`}
+								className={`${location.hash}` === `#${href}` ? "activePath" : ""}
+								smooth
+							>
 								{title}
 							</StyledListElement>
 						);
 					})}
 				</StyledList>
-				<AButton variant="primary" size="small" ishidden>
-					{SIGN_UP}
-				</AButton>
+				<Link to={AUTH_PAGE}>
+					<AButton variant="primary" size="small">
+						{SIGN_UP}
+					</AButton>
+				</Link>
+
 				{width >= WIDTH_XL_NUM ? <ASwitch /> : null}
 				<StyledADropdownMenu>{navList}</StyledADropdownMenu>
 			</StyledNavBar>

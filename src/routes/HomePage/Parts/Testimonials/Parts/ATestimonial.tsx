@@ -1,28 +1,13 @@
 /** @format */
 
-import {
-	StyledATitle,
-	StyledAuthor,
-	StyledContext,
-	StyledTestiField,
-	StyledText,
-} from "./ATestimonial.style";
+import { AspectRatioComponent } from "components/AspectRatio/AspectRatio";
+import { StyledContext } from "./ATestimonial.style";
 import { ATestimonialsProps } from "./type";
 
-export const ATestimonials = ({ author, text, date, widthItem }: ATestimonialsProps) => {
+export const ATestimonials = ({ srcImg, widthItem }: ATestimonialsProps) => {
 	return (
-		<StyledContext $widthItem={widthItem}>
-			<StyledTestiField>
-				<StyledATitle size={10} lineHeight={8} weight={400}>
-					{date}
-				</StyledATitle>
-				<StyledText size={22} lineHeight={10} weight={400}>
-					{text}
-				</StyledText>
-			</StyledTestiField>
-			<StyledAuthor size={18} lineHeight={24} weight={700}>
-				{author}
-			</StyledAuthor>
+		<StyledContext>
+			<AspectRatioComponent width={widthItem} image={srcImg} ratio={1} />
 		</StyledContext>
 	);
 };

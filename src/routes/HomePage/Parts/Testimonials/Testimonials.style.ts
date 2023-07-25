@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StyledWrapper = styled.div<{ $width: number }>`
 	overflow: auto;
 	scroll-behavior: smooth;
-	width: ${({ $width }) => `${$width}px`};
+	width: ${({ $width }) => $width}px;
 
 	&::-webkit-scrollbar {
 		width: 1px;
@@ -20,7 +20,7 @@ export const StyledHeader = styled.div`
 	justify-content: space-between;
 `;
 
-export const StyledContext = styled.div`
+export const StyledContext = styled.div<{ $gap: number }>`
 	display: flex;
-	gap: 120px;
+	gap: ${({ $gap }) => $gap}px;
 `;
