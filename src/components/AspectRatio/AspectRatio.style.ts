@@ -12,7 +12,7 @@ export const StyledContainer = styled.div<{ $width: number; $height?: number }>`
 	min-width: ${({ $width }) => `${$width}px`};
 	height: ${({ $height }) => ($height ? `${$height}px` : "auto")};
 
-	width: 50%;
+	width: 100%;
 	border-radius: 6px;
 	overflow: hidden;
 `;

@@ -12,15 +12,17 @@ export const ATitle = ({
 	marginBottom,
 	dataTestId,
 	className,
+	fontFamily,
 }: IATitleProps) => (
 	<StyledTitle
 		size={size}
 		weight={weight}
 		lineheight={lineHeight}
 		color={color}
-		marginBottom={marginBottom}
+		$marginBottom={marginBottom}
 		data-testid={dataTestId}
 		className={className}
+		$fontFamily={fontFamily}
 	>
 		{children}
 	</StyledTitle>

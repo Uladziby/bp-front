@@ -41,7 +41,7 @@ export const HeaderComponent = () => {
 	return (
 		<StyledContainer $isScrolling={isScrolling}>
 			<StyledNavBar $isScrolling={isScrolling}>
-				<StyledLogo $isScrolling={isScrolling}>
+				<StyledLogo to={"/"} $isScrolling={isScrolling}>
 					<Logo />
 				</StyledLogo>
 				<StyledList>
@@ -58,11 +58,11 @@ export const HeaderComponent = () => {
 						);
 					})}
 				</StyledList>
-				<Link to={AUTH_PAGE}>
-					<AButton variant="primary" size="small">
+				{/* <Link to={AUTH_PAGE}>
+					<AButton variant="primary" size="small" ishidden isDisabled={false}>
 						{SIGN_UP}
 					</AButton>
-				</Link>
+				</Link> */}
 
 				{width >= WIDTH_XL_NUM ? <ASwitch /> : null}
 				<StyledADropdownMenu>{navList}</StyledADropdownMenu>

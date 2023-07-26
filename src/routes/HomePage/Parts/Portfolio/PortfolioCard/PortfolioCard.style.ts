@@ -3,9 +3,9 @@
 import { AButton } from "components/AButton/AButton";
 import { styled } from "styled-components";
 
-export const StyledContainer = styled.div`
-	width: 450px;
-	height: 450px;
+export const StyledContainer = styled.div<{ $width: number }>`
+	width: ${({ $width }) => `${$width}px`};
+	height: ${({ $width }) => `${$width}px`};
 `;
 
 export const StyledContent = styled.div`

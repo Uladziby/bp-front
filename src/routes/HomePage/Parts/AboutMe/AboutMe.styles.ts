@@ -3,36 +3,29 @@
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
-import background from "assets/katrix_1.jpg";
-import { WIDTH_L } from "globalStyles";
-
-export const AboutMePhoto = styled.img`
-	object-fit: cover;
-	width: 100%;
-	max-height: 600px;
-`;
+import background from "assets/images/bg_kat.jpg";
 
 export const StyledATitle = styled(ATitle)`
-	display: flex;
-	width: 100%;
+	text-align: justify;
+	padding: 0 5rem;
+
 	color: ${({ theme }) => theme.colors.mauve12};
 `;
 
 export const StyledAMotionSection = styled(AMotionSection)`
 	display: flex;
-	flex-direction: row;
-	margin-top: 5rem;
-	padding: 10rem 0%;
-
-	& > div {
-		@media screen and (max-width: ${WIDTH_L}) {
-			flex-direction: column;
-		}
-	}
+	justify-content: center;
+	padding: 0 0 15rem;
 `;
 
-export const StyledAboutMePhoto = styled(AboutMePhoto)`
-	width: 40%;
-
+export const StyledPhoto = styled.div`
+	display: flex;
+	justify-content: center;
 	background-image: url(${background});
+	min-height: 600px;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0;
 `;

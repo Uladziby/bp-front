@@ -5,6 +5,7 @@ import ADropdownMenu from "components/ADropdownMenu/ADropdownMenu";
 import { WIDTH_XL } from "./../../globalStyles";
 import { NavHashLink as NavHashLink } from "react-router-hash-link";
 import { ASwitch } from "components/ASwitch/ASwitch";
+import { NavLink } from "react-router-dom";
 
 export const StyledContainer = styled.header<{ $isScrolling: boolean }>`
 	position: fixed;
@@ -32,7 +33,7 @@ export const StyledNavBar = styled.nav<{ $isScrolling: boolean }>`
 	height: ${({ $isScrolling }) => ($isScrolling ? "5rem" : "")};
 `;
 
-export const StyledLogo = styled.a<{ $isScrolling: boolean }>`
+export const StyledLogo = styled(NavLink)<{ $isScrolling: boolean }>`
 	display: flex;
 	font-size: 5rem;
 	font-weight: 900;

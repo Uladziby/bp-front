@@ -2,6 +2,7 @@
 
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import { motion } from "framer-motion";
+import { WIDTH_L, WIDTH_S, WIDTH_XL } from "globalStyles";
 import styled from "styled-components";
 
 export const StyledAMotionSection = styled(AMotionSection)`
@@ -26,16 +27,16 @@ export const CardsContainer = styled(motion.div)<{ width: number }>`
 		}
 	}
 
-	@media (min-width: 320px) {
+	@media (min-width: ${WIDTH_S}) {
 		grid-column-gap: var(--spacing-l);
 		grid-template-columns: repeat(1, ${({ width }) => `${width}px`});
 	}
 
-	@media (min-width: 720px) {
+	@media (min-width: ${WIDTH_L}) {
 		grid-template-columns: repeat(2, ${({ width }) => `${width}px`});
 	}
 
-	@media (min-width: 1250px) {
+	@media (min-width: ${WIDTH_XL}) {
 		grid-template-columns: repeat(3, ${({ width }) => `${width}px`});
 	}
 `;

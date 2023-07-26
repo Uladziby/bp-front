@@ -1,15 +1,16 @@
 /** @format */
 
-import { StyledAMotionSection, StyledATitle, StyledAboutMePhoto } from "./AboutMe.styles";
-import { ABOUTME_TITLE, ABOUTME_TEXT, ABOUT_TAG } from "utils/constatns";
-import AboutMePhoto from "assets/katrix_1.jpg";
-import { AspectRatioComponent } from "components/AspectRatio/AspectRatio";
+import { StyledAMotionSection, StyledATitle, StyledPhoto } from "./AboutMe.styles";
+import { ABOUTME_TEXT, ABOUTME_TITLE, ABOUT_TAG } from "utils/constatns";
 
 export const AboutMe = () => {
 	return (
 		<StyledAMotionSection id={ABOUT_TAG}>
-			<AspectRatioComponent image={AboutMePhoto} width={220} ratio={3 / 4} />
-			<StyledATitle size={24} weight={400} lineHeight={36}>
+			<StyledPhoto />
+			<StyledATitle size={42} weight={300} lineHeight={36} fontFamily="Cormorant Garamond">
+				{ABOUTME_TITLE}
+			</StyledATitle>
+			<StyledATitle size={22} weight={300} lineHeight={36} fontFamily="Manrope">
 				{ABOUTME_TEXT}
 			</StyledATitle>
 		</StyledAMotionSection>

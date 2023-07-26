@@ -1,8 +1,6 @@
 /** @format */
 import { StyledBackground } from "../MyServices.style";
 import { ServiceCardProps } from "../type";
-import * as HoverCard from "@radix-ui/react-hover-card";
-import { HoverServiceCard } from "../HoverServiceCard/HoverServiceCard";
 import {
 	StyledATitle,
 	StyledCard,
@@ -11,7 +9,7 @@ import {
 	StyledListItem,
 } from "./ServiceCard.style";
 
-const ServiceCard = ({
+export const ServiceCard = ({
 	backgroundImage,
 	context,
 	title,
@@ -20,14 +18,6 @@ const ServiceCard = ({
 	description,
 }: ServiceCardProps) => {
 	return (
-		/* 	<HoverCard.Root>
-			<HoverCard.Trigger asChild>
-			</HoverCard.Trigger>
-			<HoverCard.Portal>
-				<HoverServiceCard />
-			</HoverCard.Portal>
-		</HoverCard.Root> */
-
 		<StyledCard className="card" width={width} heigth={height}>
 			<StyledBackground background={backgroundImage} className="card__background" />
 			<StyledCardContent $heightContent={width} className="card__content">
@@ -46,5 +36,3 @@ const ServiceCard = ({
 		</StyledCard>
 	);
 };
-
-export default ServiceCard;

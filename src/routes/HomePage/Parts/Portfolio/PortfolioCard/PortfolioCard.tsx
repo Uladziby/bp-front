@@ -5,20 +5,20 @@ import { StyledAButton, StyledContainer, StyledContent } from "./PortfolioCard.s
 interface PortfolioCardProps {
 	imageBefore: string;
 	imageAfter: string;
+	width: number;
 }
 
-export const PortfolioCard = ({ imageBefore, imageAfter }: PortfolioCardProps) => {
-	const [image, toggleImage] = useState(false);
+export const PortfolioCard = ({ imageBefore, imageAfter, width }: PortfolioCardProps) => {
+	const [image, toggleImage] = useState<boolean>(false);
+
+	const onToggleImage = () => {
+		toggleImage(!image);
+	};
 
 	return (
-		<StyledContainer>
+		<StyledContainer $width={width}>
 			<StyledContent style={{ backgroundImage: `url(${image ? imageBefore : imageAfter})` }}>
-				<StyledAButton
-					variant="secondary"
-					size="small"
-					onClick={() => toggleImage(!image)}
-					isWithMotion
-				>
+				<StyledAButton variant="secondary" size="small" onClick={onToggleImage} isWithMotion>
 					{image ? "До" : "После"}
 				</StyledAButton>
 			</StyledContent>

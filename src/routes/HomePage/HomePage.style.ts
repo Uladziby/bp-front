@@ -1,5 +1,6 @@
 /** @format */
 
+import { ATitle } from "components/ATitle/ATitle";
 import styled from "styled-components";
 
 export const StyledContainer = styled.image`
@@ -10,4 +11,9 @@ export const StyledContainer = styled.image`
 	height: 60vh;
 	background-repeat: no-repeat;
 	background-color: ${({ theme }) => theme.colors.gray2};
+`;
+
+export const StyledTitle = styled(ATitle)`
+	margin-top: 10rem;
+	display: flex;
 `;
