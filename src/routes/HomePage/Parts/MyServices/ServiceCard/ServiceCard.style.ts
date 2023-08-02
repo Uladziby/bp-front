@@ -12,13 +12,10 @@ export const StyledATitle = styled(ATitle)<{ isBlur: boolean }>`
 	color: ${COLOR_PALETTE.white};
 	margin: 0;
 	text-transform: uppercase;
-<<<<<<< HEAD
 
 	@media screen and (max-width: ${WIDTH_S}) {
 		font-size: 1.5rem;
 	}
-=======
->>>>>>> 43ae4ca (refactor: optimizing images)
 `;
 
 export const StyledCardContent = styled.div<{ $heightContent: number }>`
