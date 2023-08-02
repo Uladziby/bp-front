@@ -1,6 +1,7 @@
 /** @format */
 
 import { ATitle } from "components/ATitle/ATitle";
+import { WIDTH_S } from "globalStyles";
 import { styled } from "styled-components";
 
 export const StyledContainer = styled.section`
@@ -21,4 +22,8 @@ export const StyledATitle = styled(ATitle)`
 	color: ${({ theme }) => theme.colors.mauve12};
 	justify-content: center;
 	display: flex;
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		font-size: 18px;
+	}
 `;

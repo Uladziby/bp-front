@@ -1,6 +1,7 @@
 /** @format */
 
 import { ATitle } from "components/ATitle/ATitle";
+import { WIDTH_S } from "globalStyles";
 import { styled } from "styled-components";
 import { COLOR_PALETTE } from "utils/colors";
 
@@ -10,6 +11,11 @@ export const StyledATitle = styled(ATitle)<{ isBlur: boolean }>`
 	text-align: center;
 	color: ${COLOR_PALETTE.white};
 	margin: 0;
+	text-transform: uppercase;
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		font-size: 1.5rem;
+	}
 `;
 
 export const StyledCardContent = styled.div<{ $heightContent: number }>`
@@ -44,11 +50,11 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 	}
 
 	&:hover .card__content ul li {
-		transform: scale(1.3);
+		transform: scale(1.2);
 	}
 
 	&:hover .card__content h2 {
-		transform: scale(1.3);
+		transform: scale(1.2);
 	}
 
 	&::before {
@@ -75,4 +81,8 @@ export const StyledListItem = styled.li`
 	font-weight: 400;
 	text-align: justify;
 	color: ${COLOR_PALETTE.white};
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		font-size: 1.2rem;
+	}
 `;

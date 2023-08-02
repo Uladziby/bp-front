@@ -6,7 +6,10 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Manrope', sans-serif;    }
+        font-family: 'Manrope', sans-serif;   
+    
+    
+    }
 
     html{
         font-size: 8px;

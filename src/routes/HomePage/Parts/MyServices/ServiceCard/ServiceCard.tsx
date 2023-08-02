@@ -21,7 +21,7 @@ export const ServiceCard = ({
 		<StyledCard className="card" width={width} heigth={height}>
 			<StyledBackground background={backgroundImage} className="card__background" />
 			<StyledCardContent $heightContent={width} className="card__content">
-				<StyledATitle size={18} weight={400} lineHeight={36} isBlur={true}>
+				<StyledATitle size={16} weight={400} lineHeight={30} isBlur={true}>
 					{title}
 				</StyledATitle>
 				<StyledList>

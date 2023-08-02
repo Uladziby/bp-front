@@ -1,15 +1,16 @@
 /** @format */
 
-import { COLOR_PALETTE } from "utils/colors";
 import {
 	StyledAMotionSection,
 	StyledBlock,
 	StyledName,
 	StyledSubTitle,
-	StyledTitle,
 } from "./Introducing.styles";
+import { INTRODUCING } from "utils/constatns";
 
 export const Introducing = () => {
+	const { lastName, firstName, subtitle } = INTRODUCING;
+
 	return (
 		<StyledAMotionSection>
 			<StyledBlock>
@@ -17,26 +18,24 @@ export const Introducing = () => {
 					size={24}
 					lineHeight={42}
 					fontFamily="Cormorant Garamond"
-					weight={200}
+					weight={300}
 					marginBottom={0}
-					color={COLOR_PALETTE.black}
 				>
-					екатерина
+					{firstName}
 				</StyledName>
 				<StyledName
 					size={24}
 					lineHeight={42}
 					fontFamily="Cormorant Garamond"
-					weight={400}
+					weight={300}
 					marginBottom={0}
-					color={COLOR_PALETTE.black}
 				>
-					янушевская
+					{lastName}
 				</StyledName>
 			</StyledBlock>
 
 			<StyledSubTitle size={20} weight={300} lineHeight={24}>
-				твой персональный стилист
+				{subtitle}
 			</StyledSubTitle>
 		</StyledAMotionSection>
 	);

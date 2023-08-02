@@ -1,5 +1,6 @@
 /** @format */
 
+import { slate } from "@radix-ui/colors";
 import { AButton } from "components/AButton/AButton";
 import { styled } from "styled-components";
 
@@ -21,4 +22,5 @@ export const StyledAButton = styled(AButton)`
 	top: 3%;
 	left: 2%;
 	background-color: transparent;
+	color: ${slate.slate1};
 `;

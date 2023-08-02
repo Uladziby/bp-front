@@ -7,10 +7,16 @@ export const AboutMe = () => {
 	return (
 		<StyledAMotionSection id={ABOUT_TAG}>
 			<StyledPhoto />
-			<StyledATitle size={42} weight={300} lineHeight={36} fontFamily="Cormorant Garamond">
+			<StyledATitle
+				size={42}
+				weight={300}
+				lineHeight={36}
+				fontFamily="Cormorant Garamond"
+				marginBottom={0}
+			>
 				{ABOUTME_TITLE}
 			</StyledATitle>
-			<StyledATitle size={22} weight={300} lineHeight={36} fontFamily="Manrope">
+			<StyledATitle size={19} weight={300} lineHeight={30} fontFamily="Manrope">
 				{ABOUTME_TEXT}
 			</StyledATitle>
 		</StyledAMotionSection>

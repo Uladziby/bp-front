@@ -2,14 +2,13 @@
 
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import { ATitle } from "components/ATitle/ATitle";
-import { WIDTH_XXL, WIDTH_XL, WIDTH_L, WIDTH_M } from "globalStyles";
+import { WIDTH_XXL, WIDTH_XL, WIDTH_L, WIDTH_M, WIDTH_S } from "globalStyles";
 import styled from "styled-components";
 
 export const StyledAMotionSection = styled(AMotionSection)`
 	margin-top: 10rem;
 	justify-content: center;
 	align-items: center;
-	padding: 20rem 3rem;
 
 	& > div {
 		display: flex;
@@ -17,7 +16,7 @@ export const StyledAMotionSection = styled(AMotionSection)`
 		justify-content: end;
 		min-height: inherit;
 		border: 1px solid black;
-		border-width: 1px 0 1px 0;
+		border-width: 0px 0 0px 0;
 		width: 100%;
 		max-width: 700px;
 
@@ -45,6 +44,8 @@ export const StyledName = styled(ATitle)`
 	justify-content: center;
 	align-items: center;
 	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: ${({ theme }) => theme.colors.mauve12};
 
 	@media screen and (max-width: ${WIDTH_XXL}) {
 		font-size: 5rem;
@@ -56,10 +57,18 @@ export const StyledName = styled(ATitle)`
 
 	@media screen and (max-width: ${WIDTH_L}) {
 		font-size: 3rem;
+		letter-spacing: 0.5rem;
 	}
 
 	@media screen and (max-width: ${WIDTH_M}) {
+		letter-spacing: 0.2rem;
+
 		font-size: 3rem;
+	}
+	@media screen and (max-width: ${WIDTH_S}) {
+		letter-spacing: 0.1rem;
+
+		font-size: 2rem;
 	}
 `;
 
@@ -68,17 +77,24 @@ export const StyledSubTitle = styled(ATitle)`
 	justify-content: center;
 	word-wrap: normal;
 	text-transform: uppercase;
+	color: ${({ theme }) => theme.colors.mauve10};
 
 	@media screen and (max-width: ${WIDTH_L}) {
 		font-size: 2rem;
+	}
+
+	@media screen and (max-width: ${WIDTH_M}) {
+		letter-spacing: 0.2rem;
+		font-size: 1.5rem;
+	}
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		letter-spacing: 0.1rem;
+		font-size: 1rem;
 	}
 `;
 
 export const StyledBlock = styled.div`
 	display: flex;
 	gap: 2vw;
-`;
-
-export const StyledTitle = styled(ATitle)`
-	display: flex;
 `;

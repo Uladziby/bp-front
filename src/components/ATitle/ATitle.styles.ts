@@ -1,5 +1,6 @@
 /** @format */
 
+import { WIDTH_S } from "globalStyles";
 import styled from "styled-components";
 
 export const StyledTitle = styled.h2<{

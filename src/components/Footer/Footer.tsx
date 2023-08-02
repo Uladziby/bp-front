@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
 	return (
 		<FooterContainer>
 			<SocialIcons>
-				<StyledIconLink href="https://www.instagram.com/yanushevskaja/" target="_blank">
+				<StyledIconLink href="https://www.instagram.com/yanusheuskaya/" target="_blank">
 					<InstaIcon />
 				</StyledIconLink>
 				<StyledIconLink href="https://t.me/Katarzyna_y" target="_blank">
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
 			</SocialIcons>
 
 			<FooterText>
-				© {new Date().getFullYear()} K.Yanushevskaya | Powered by{" "}
+				© {new Date().getFullYear()} Powered by{" "}
 				<FooterLink href="https://www.flexdesignstudio.com/">FlexDesignStudio</FooterLink>
 			</FooterText>
 		</FooterContainer>

@@ -4,18 +4,24 @@ import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
 import background from "assets/images/bg_kat.jpg";
+import { WIDTH_S } from "globalStyles";
 
 export const StyledATitle = styled(ATitle)`
 	text-align: justify;
-	padding: 0 5rem;
+	padding: 2rem 5rem;
 
 	color: ${({ theme }) => theme.colors.mauve12};
+	max-width: 1000px;
+
+	@media screen and (max-width: ${WIDTH_S}) {
+		font-size: 14px;
+	}
 `;
 
 export const StyledAMotionSection = styled(AMotionSection)`
 	display: flex;
 	justify-content: center;
-	padding: 0 0 15rem;
+	padding: 0 0 5rem;
 `;
 
 export const StyledPhoto = styled.div`
@@ -27,5 +33,5 @@ export const StyledPhoto = styled.div`
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 0;
+	padding: 0 0 5rem 0;
 `;
