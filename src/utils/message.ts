@@ -10,3 +10,11 @@ export const contactFormErrors = {
 	maxSymbols: "Максимальный размер сообщения 200 символов",
 	incorrectEmail: "Неправильный адрес почты",
 };
+
+export const loginFormValidation = {
+	emptyField: "Поле не может быть пустым",
+	maxSymbols: "Максимальный размер сообщения 50 символов",
+	incorrectEmail: "Неправильный адрес почты",
+	invalidSymbols: "Недопустимые символы",
+	tooShortPassword: "Пароль должен быть не менее 6 символов и содержать",
+};

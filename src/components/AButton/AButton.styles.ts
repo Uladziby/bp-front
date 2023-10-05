@@ -84,6 +84,7 @@ export const StyledButton = styled(motion.button)<{
 	font-weight: 500;
 	font-size: 1.5rem;
 	line-height: 1;
+	transition: all 0.375s;
 	cursor: pointer;
 
 	box-shadow: 0 2px 10px ${({ theme }) => theme.colors.slate7};

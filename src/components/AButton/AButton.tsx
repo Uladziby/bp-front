@@ -19,15 +19,15 @@ export const AButton = ({
 	ishidden,
 }: IAButtonProps) => (
 	<StyledButton
-		{...buttonWithMotion(isWithMotion)}
-		onClick={onClick}
-		title={iconTitle}
 		data-testid={dataTestId}
+		className={className}
+		onClick={onClick}
+		{...buttonWithMotion(isWithMotion)}
+		title={iconTitle}
 		variant={variant}
 		disabled={isDisabled}
 		size={size}
 		type={type}
-		className={className}
 		$isActive={$isActive}
 		$ishidden={ishidden}
 	>

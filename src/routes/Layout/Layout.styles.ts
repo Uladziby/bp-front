@@ -3,8 +3,12 @@
 import styled from "styled-components";
 
 export const StyledContainer = styled.div`
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
+	justify-content: center;
 	width: inherit;
+	min-height: 86vh;
+
+	background-color: ${(props) => props.theme.colors.gray2};
 `;

@@ -85,6 +85,7 @@ export const StyledSubTitle = styled(ATitle)`
 
 	@media screen and (max-width: ${WIDTH_M}) {
 		letter-spacing: 0.2rem;
+<<<<<<< HEAD
 		font-size: 1.5rem;
 	}
 
@@ -92,6 +93,11 @@ export const StyledSubTitle = styled(ATitle)`
 		letter-spacing: 0.1rem;
 		font-size: 1rem;
 	}
+=======
+
+		font-size: 1.5rem;
+	}
+>>>>>>> 43ae4ca (refactor: optimizing images)
 `;
 
 export const StyledBlock = styled.div`

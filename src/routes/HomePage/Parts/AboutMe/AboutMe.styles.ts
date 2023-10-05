@@ -12,10 +12,13 @@ export const StyledATitle = styled(ATitle)`
 
 	color: ${({ theme }) => theme.colors.mauve12};
 	max-width: 1000px;
+<<<<<<< HEAD
 
 	@media screen and (max-width: ${WIDTH_S}) {
 		font-size: 14px;
 	}
+=======
+>>>>>>> 43ae4ca (refactor: optimizing images)
 `;
 
 export const StyledAMotionSection = styled(AMotionSection)`

@@ -1,6 +1,5 @@
 /** @format */
 
-import "./App.css";
 import { client } from "./init/client";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ThemeContext, ThemeProvider } from "styled-components";
