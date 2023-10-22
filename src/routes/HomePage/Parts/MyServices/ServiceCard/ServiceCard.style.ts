@@ -38,7 +38,6 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 	list-style: none;
 	position: relative;
 	cursor: pointer;
-	transition: all 0.375ms;
 
 	${({ width, heigth }) =>
 		heigth
@@ -46,7 +45,7 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 			: { width: `${width}px`, height: `${width}px` }};
 
 	&:hover .card__background {
-		transform: scale(1.2) translateZ(0);
+		transform: scale(1.1) translateZ(0);
 	}
 
 	&:hover .card__content ul li {
@@ -65,14 +64,14 @@ export const StyledCard = styled.div.attrs((props) => ({ className: props.classN
 `;
 
 export const StyledList = styled.ul`
-	list-style: inside;
-	list-style-position: outside;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	gap: 2rem;
 	margin: 0;
 	padding: 2rem;
+	list-style: inside;
+	list-style-position: outside;
 `;
 
 export const StyledListItem = styled.li`

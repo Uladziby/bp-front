@@ -3,7 +3,7 @@
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
-import background from "assets/images/bg_kat.jpg";
+import background from "assets/images/myphoto.webp";
 import { WIDTH_S } from "globalStyles";
 
 export const StyledATitle = styled(ATitle)`

@@ -9,7 +9,7 @@ interface PortfolioCardProps {
 }
 
 export const PortfolioCard = ({ imageBefore, imageAfter, width }: PortfolioCardProps) => {
-	const [image, toggleImage] = useState<boolean>(false);
+	const [image, toggleImage] = useState<boolean>(true);
 
 	const onToggleImage = () => {
 		toggleImage(!image);

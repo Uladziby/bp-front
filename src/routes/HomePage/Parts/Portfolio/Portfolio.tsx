@@ -21,22 +21,22 @@ const heightItem = 350;
 export const Portfolio = () => {
 	const portfolioCard: IPortfolioCard[] = useMemo(
 		() => [
-			{
+			/* 	{
 				imageBefore: example_one_before,
 				imageAfter: example_two_after,
-			},
+			}, */
 			{
 				imageBefore: example_2_before,
 				imageAfter: example_2_after,
 			},
 			{
-				imageBefore: example_4_before,
-				imageAfter: example_4_after,
-			},
-			{
 				imageBefore: example_3_before,
 				imageAfter: example_3_after,
 			},
+			/* 	{
+				imageBefore: example_4_before,
+				imageAfter: example_4_after,
+			}, */
 		],
 		[]
 	);
