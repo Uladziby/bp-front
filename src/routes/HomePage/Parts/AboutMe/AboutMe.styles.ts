@@ -3,7 +3,6 @@
 import { styled } from "styled-components";
 import { ATitle } from "components/ATitle/ATitle";
 import { AMotionSection } from "components/AMotionSection/AMotionSection";
-import background from "assets/images/myphoto.webp";
 import { WIDTH_S } from "globalStyles";
 
 export const StyledATitle = styled(ATitle)`
@@ -24,14 +23,13 @@ export const StyledAMotionSection = styled(AMotionSection)`
 	padding: 0 0 5rem;
 `;
 
-export const StyledPhoto = styled.div`
+/* export const StyledPhoto = styled.img<{ src: string }>`
 	display: flex;
 	justify-content: center;
-	background-image: url(${background});
-	min-height: 600px;
+	background-image: url(${({ src }) => src});
 	width: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 0 0 5rem 0;
 `;
+ */

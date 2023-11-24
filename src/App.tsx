@@ -17,7 +17,7 @@ const App = () => {
 	return (
 		<ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
 			<ThemeProvider theme={theme}>
-				<ApolloProvider client={client}>
+				<ApolloProvider client={client as any}>
 					<GlobalStyle />
 					<BrowserRouter>
 						<Router />
