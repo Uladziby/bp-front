@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ATextarea snapshot 1`] = `
+<textarea
+  class="sc-dkrFOg bDjIvE"
+  id="name"
+  name="name"
+  placeholder="placeholder"
+  rows="2"
+  style="height: 2px;"
+>
+  value
+</textarea>
+`;
