@@ -1,6 +1,6 @@
 /** @format */
 
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -23,10 +23,11 @@ const GlobalStyle = createGlobalStyle`
 
 export default GlobalStyle;
 
-export const WIDTH_S = "320px";
-export const WIDTH_M = "480px";
-export const WIDTH_L = "767px";
-export const WIDTH_XL = "960px";
-export const WIDTH_XXL = "1200px";
+export const WIDTH_S = '320px';
+export const WIDTH_M = '480px';
+export const WIDTH_L = '767px';
+export const WIDTH_XL = '960px';
+export const WIDTH_XXL = '1200px';
 export const WIDTH_XL_NUM = 960;
 export const WIDTH_L_NUM = 767;
+export const WIDTH_M_NUM = 480;
