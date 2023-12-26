@@ -28,6 +28,7 @@ export const StyledContainer = styled.div<{ $heightContent: number; $widthVisibl
 	height: ${({ $heightContent }) => $heightContent}px;
 	width: calc(${({ $widthVisiblePart }) => $widthVisiblePart}px - 5vw);
 	max-width: ${({ $heightContent }) => $heightContent * 3}px;
+	min-width: ${({ $heightContent }) => $heightContent}px;
 	overflow: hidden;
 `;
 

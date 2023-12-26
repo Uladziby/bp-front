@@ -59,7 +59,7 @@ const SIZE = {
 	`,
 	medium: css`
 		height: 5rem;
-		width: 25rem;
+		width: 20rem;
 		border-radius: ${BORDER_RADIUS_ENUM.MEDIUM};
 	`,
 	large: css`

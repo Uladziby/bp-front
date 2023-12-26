@@ -1,11 +1,5 @@
 /** @format */
-import {
-	FooterContainer,
-	FooterText,
-	FooterLink,
-	StyledIconLink,
-	SocialIcons,
-} from "./Footer.styles";
+import { FooterContainer, FooterText, StyledIconLink, SocialIcons } from "./Footer.styles";
 import { ReactComponent as TelegramIcon } from "assets/icons/telegram.svg";
 import { ReactComponent as InstaIcon } from "assets/icons/instagram.svg";
 import { ReactComponent as MailIcon } from "assets/icons/envelope.svg";
@@ -25,10 +19,7 @@ export const Footer: React.FC = () => {
 				</StyledIconLink>
 			</SocialIcons>
 
-			<FooterText>
-				© {new Date().getFullYear()} Powered by{" "}
-				<FooterLink href="https://www.flexdesignstudio.com/">FlexDesignStudio</FooterLink>
-			</FooterText>
+			<FooterText>© {new Date().getFullYear()} Katsiaryna Yanusheuskaya </FooterText>
 		</FooterContainer>
 	);
 };

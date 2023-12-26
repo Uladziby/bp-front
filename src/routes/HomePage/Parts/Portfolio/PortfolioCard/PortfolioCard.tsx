@@ -6,9 +6,10 @@ interface PortfolioCardProps {
 	imageBefore: string;
 	imageAfter: string;
 	width: number;
+	height: number;
 }
 
-export const PortfolioCard = ({ imageBefore, imageAfter, width }: PortfolioCardProps) => {
+export const PortfolioCard = ({ imageBefore, imageAfter, width, height }: PortfolioCardProps) => {
 	const [image, toggleImage] = useState<boolean>(true);
 
 	const onToggleImage = () => {
@@ -16,10 +17,10 @@ export const PortfolioCard = ({ imageBefore, imageAfter, width }: PortfolioCardP
 	};
 
 	return (
-		<StyledContainer $width={width}>
+		<StyledContainer $width={width} $height={height}>
 			<StyledContent style={{ backgroundImage: `url(${image ? imageBefore : imageAfter})` }}>
-				<StyledAButton variant="secondary" size="small" onClick={onToggleImage} isWithMotion>
-					{image ? "До" : "После"}
+				<StyledAButton variant="secondary" size="medium" onClick={onToggleImage} isWithMotion>
+					Показать фото {image ? "до" : "после"}
 				</StyledAButton>
 			</StyledContent>
 		</StyledContainer>
